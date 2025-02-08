@@ -14,14 +14,13 @@ export default function HeroSection() {
             </div>
             
             <h1 className="text-5xl text-black lg:text-6xl font-bold leading-tight">
-              Book With Us<br />
-              And <span className="text-orange-500">Enjoy</span> Your<br />
+            Book With Us And<br />
+               <span className="text-orange-500">Enjoy</span> Your<br />
               <span className="text-orange-500">Journey!</span>
             </h1>
             
             <p className="text-gray-600 text-lg max-w-md">
-              Where adventure meets comfort. We create unforgettable travel experiences
-            </p>
+            Where adventure meets comfort. We create unforgettable travel experiences            </p>
             
             <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
               Get Started
@@ -34,7 +33,7 @@ export default function HeroSection() {
               {/* Main circular background */}
               <div className="absolute inset-0 bg-orange-500 rounded-full overflow-hidden">
                 <Image
-                  src="/hero-image.jpg"
+                  src="/home-img/poster-girl.png"
                   alt="Happy traveler"
                   width={500}
                   height={500}
@@ -46,14 +45,14 @@ export default function HeroSection() {
               <div className="absolute bottom-40 -left-10 bg-white text-black rounded-full shadow-lg px-4 py-2">
                 <div className="flex items-center space-x-2">
                   <span className="text-orange-500">🎯</span>
-                  <span>776k followers</span>
+                  <span>736K Followers</span>
                 </div>
               </div>
 
               <div className="absolute bottom-20 -right-10 bg-white text-black rounded-full shadow-lg px-4 py-2">
                 <div className="flex items-center space-x-2">
                   <span className="text-orange-500">🏨</span>
-                  <span>204k follo  </span>
+                  <span>204K Followers</span>
                 </div>
               </div>
 

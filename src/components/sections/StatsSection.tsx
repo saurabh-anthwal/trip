@@ -2,8 +2,12 @@ import { stats } from '@/data/mockData';
 
 export default function StatsSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold">Truth, Growth, and Excellence</h2>
+          <p className="mt-2 text-3xl font-bold">of our journey!</p>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
