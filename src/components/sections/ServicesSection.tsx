@@ -1,12 +1,4 @@
-// import { services } from "@/data/mockData";
-// import { FaWallet, FaMapMarkedAlt, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
-
-// const iconMap = {
-//   FaWallet,
-//   FaMapMarkedAlt,
-//   FaCheckCircle,
-// };
 
 export default function ServicesSection() {
   return (
@@ -56,13 +48,13 @@ export default function ServicesSection() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
           <div className="relative w-[600px] h-[577px] rounded-xl overflow-hidden">
             <Image
-              src="/home-img/Badrinath_temple.PNG"
+              src="/home-img/Badrinath_temple.png"
               alt="Main Image"
               layout="fill"
             />
             <div className="absolute top-[-4px] left-[-20px] bg-[#F9F9F9] shadow-lg rounded-[21px] border border-[#808080] flex items-center px-4 py-2 z-50 w-[234px] h-[84px]">
               <Image
-                src="/home-img/Badrinath_temple.PNG"
+                src="/home-img/Badrinath_temple.png"
                 alt="Kedarnath"
                 width={50}
                 height={50}
@@ -78,7 +70,7 @@ export default function ServicesSection() {
             </div>
             <div className="absolute top-[50%] left-[60%] bg-white shadow-lg rounded-lg flex items-center px-4 py-2">
               <Image
-                src="/home-img/badrinath-temple-rain.PNG"
+                src="/home-img/badrinath-temple-rain.png"
                 alt="Badrinath"
                 width={50}
                 height={50}
@@ -93,7 +85,7 @@ export default function ServicesSection() {
             </div>
             <div className="absolute bottom-[0px] right-[0px] bg-white shadow-lg rounded-lg flex items-center px-4 py-2">
               <Image
-                src="/home-img/Kedarnath_Temple.PNG"
+                src="/home-img/Kedarnath_Temple.png"
                 alt="Gangotri"
                 width={50}
                 height={50}
