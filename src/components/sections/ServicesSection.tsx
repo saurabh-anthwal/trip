@@ -1,12 +1,12 @@
-import { services } from "@/data/mockData";
-import { FaWallet, FaMapMarkedAlt, FaCheckCircle } from "react-icons/fa";
+// import { services } from "@/data/mockData";
+// import { FaWallet, FaMapMarkedAlt, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
 
-const iconMap = {
-  FaWallet,
-  FaMapMarkedAlt,
-  FaCheckCircle,
-};
+// const iconMap = {
+//   FaWallet,
+//   FaMapMarkedAlt,
+//   FaCheckCircle,
+// };
 
 export default function ServicesSection() {
   return (

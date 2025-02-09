@@ -1,26 +1,26 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from 'next/image';
 
-const slides = [
-  { id: 1, text: 'Welcome to Our Travel Agency!' },
-  { id: 2, text: 'Explore the Beauty of Nature!' },
-  { id: 3, text: 'Book Your Next Adventure with Us!' },
-];
+// const slides = [
+//   { id: 1, text: 'Welcome to Our Travel Agency!' },
+//   { id: 2, text: 'Explore the Beauty of Nature!' },
+//   { id: 3, text: 'Book Your Next Adventure with Us!' },
+// ];
 
 const BannerSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
+  // const handleNext = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  // };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-  };
+  // const handlePrev = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+  // };
 
   return (
     <div className="relative bg-white pt-24 pb-4">
