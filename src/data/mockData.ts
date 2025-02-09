@@ -94,14 +94,14 @@ export const testimonials: Testimonial[] = [
   {
     id: 1,
     name: 'Sarah Johnson',
-    image: '/testimonials/user1.jpg',
-    comment: 'Amazing experience with Triplanza! The tour was well organized and the guide was very knowledgeable.',
+    image: '/home-img/testimonal.PNG',
+    comment: 'It was an nice experience to Char Dham Yatra with Triplanza and our cab driver Mr Nitin is also a very sincere person who guided us all these four holy places. Thanks Mr Suraj Bhatt and Nitin',
     rating: 5
   },
   {
     id: 2,
     name: 'Mike Chen',
-    image: '/testimonials/user2.jpg',
+    image: '/home-img/testimonal.PNG',
     comment: 'Best travel experience ever! Will definitely book again with Triplanza.',
     rating: 5
   },
@@ -112,21 +112,56 @@ export const monthlyPlaces: Place[] = [
     id: 1,
     title: 'Hampi',
     location: 'Karnataka',
-    image: '/monthlyPlaces/hampi.jpg',
-    description: 'Hampi is a small village in the southern Indian state of Karnataka.'
+    image: '/home-img/Rajasthan.PNG',
+    description: 'January'
   },
   {
     id: 2,
     title: 'Ranthambore',
     location: 'Rajasthan',
-    image: '/monthlyPlaces/ranthambore.jpg',
+    image: '/home-img/Goa.PNG',
     description: 'Ranthambore is a national park in the state of Rajasthan, India.'
   },
   {
     id: 3,
     title: 'Gangtok',
     location: 'Sikkim',
-    image: '/monthlyPlaces/gangtok.jpg',
+    image: '/home-img/Varanasi.PNG',
+    description: 'Gangtok is the capital of the Indian state of Sikkim.'
+  },
+  {
+    id: 4,
+    title: 'Gangtok',
+    location: 'Sikkim',
+    image: '/home-img/Darjeeling.PNG',
+    description: 'Gangtok is the capital of the Indian state of Sikkim.'
+  },
+  {
+    id: 5,
+    title: 'Gangtok',
+    location: 'Sikkim',
+    image: '/home-img/Valley.PNG',
+    description: 'Gangtok is the capital of the Indian state of Sikkim.'
+  },
+  {
+    id: 6,
+    title: 'Gangtok',
+    location: 'Sikkim',
+    image: '/home-img/Meghalaya.PNG',
+    description: 'Gangtok is the capital of the Indian state of Sikkim.'
+  },
+  {
+    id: 7,
+    title: 'Gangtok',
+    location: 'Sikkim',
+    image: '/home-img/Kerala.PNG',
+    description: 'Gangtok is the capital of the Indian state of Sikkim.'
+  },
+  {
+    id: 8,
+    title: 'Gangtok',
+    location: 'Sikkim',
+    image: '/home-img/Amritsar.PNG',
     description: 'Gangtok is the capital of the Indian state of Sikkim.'
   }
 ];
