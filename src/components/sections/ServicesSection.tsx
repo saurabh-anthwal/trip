@@ -10,7 +10,7 @@ const iconMap = {
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="pb-24 bg-gradient-to-b from-white to-gray-50">
       
       <div className="flex flex-col items-center px-6 pt-10">
         <div className="flex items-center space-x-4 mx-auto justify-center my-8">
