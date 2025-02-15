@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { explorePlaces } from "@/data/mockData";
-import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import Link from "next/link";
 
 const categories = [
