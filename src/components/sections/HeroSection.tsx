@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <div className="relative bg-gradient-to-b from-orange-50 to-white h-auto pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row  justify-between">
           {/* Left Content */}
-          <div className="lg:w-1/2 space-y-6 pt-[100px]">
+          <div className="lg:w-2/3 space-y-6 pt-[100px]">
             <div className="inline-flex items-center bg-white px-[31.558px] py-[15.779px] gap-[15.779px] rounded-[98.617px] shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
               <span className="text-[14px] font-semibold text-[#FF7F00] leading-[120%] font-poppins">
                 Explore the world!
@@ -29,34 +29,35 @@ export default function HeroSection() {
               </svg>
             </div>
 
-            <h1 className="text-[72px] text-black font-poppins font-semibold leading-[86.4px]">
-              Book With Us And
+            <h1 className="text-7xl text-black font-poppins font-semibold leading-[86.4px]">
+              Book With Us<br/> And
               <span className="text-[#FF7F00]"> Enjoy</span> Your
               <br />
               <span className="text-[#FF7F00]">Journey!</span>
             </h1>
 
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-xl">
               Where adventure meets comfort. We create unforgettable travel
               experiences{" "}
             </p>
 
-            <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
+            <button className="bg-[#FF7F00] text-xl text-white px-12 py-4 rounded-full hover:bg-orange-600 transition-colors">
               Get Started
             </button>
           </div>
 
           {/* Right Content - Image with Floating Elements */}
-          <div className="lg:w-1/2 relative mt-10 lg:mt-0">
-            <div className="relative w-[900px] h-[740px]">
+          <div className="w-full relative mt-10 lg:mt-0">
+            <div className="relative h-[740px]">
               {/* Main circular background */}
-              <div className="absolute inset-0  rounded-full overflow-hidden">
+              <div className="absolute inset-0 rounded-full overflow-hidden">
                 <Image
-                  src="/home-img/banner.png"
+                  src="/home-img/saurabh.png"
                   alt="Happy traveler"
+                  // fill
                   width={900}
                   height={900}
-                  className="object-cover"
+                  className="w-[full"
                 />
               </div>
 

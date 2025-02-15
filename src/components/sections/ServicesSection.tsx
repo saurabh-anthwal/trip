@@ -27,7 +27,7 @@ export default function ServicesSection() {
           </svg>
 
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl text-gray-900">
             What Services We Provide
           </h2>
 
@@ -49,16 +49,17 @@ export default function ServicesSection() {
             <path d="M7.5 6H31" stroke="#FF7F00" />
           </svg>
         </div>
-        <h2 className="text-[19px] text-black/50 text-center font-normal leading-[22.8px] mb-6">
+        <h2 className="text-[19px] text-black/50 text-center font-normal leading-[22.8px] mb-10">
           Find Trip that fits a Flexible lifestyle
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          <div className="relative w-[600px] h-[577px] rounded-xl overflow-hidden">
+        <div className="flex flex-col md:flex-row w-full justify-center max-w-7xl items-start gap-12">
+          <div className="relative w-full h-[577px] rounded-xl overflow-hidden">
             <Image
               src="/home-img/Badrinath_temple.PNG"
               alt="Main Image"
-              layout="fill"
+              fill
+              className="object-cover w-full h-full"
             />
             <div className="absolute top-[-4px] left-[-20px] bg-[#F9F9F9] shadow-lg rounded-[21px] border border-[#808080] flex items-center px-4 py-2 z-50 w-[234px] h-[84px]">
               <Image
@@ -107,13 +108,13 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="w-[466px]">
+          <div className="mt-4 w-full">
             {[
               { number: 1, title: "Find Trip That Fit a flexible lifestyle" },
               { number: 2, title: "Travel with more confidence" },
               { number: 3, title: "See what’s really included" },
             ].map((item) => (
-              <div key={item.number} className="my-7">
+              <div key={item.number} className="mb-7">
                 <span className="bg-[#FF7F00] text-white w-[52px] h-[22px] flex items-center justify-center rounded-[9px] font-semibold text-sm">
                   {item.number}
                 </span>

@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -14,14 +14,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold">
-              <span className="text-black">trip</span>
-              <span className="text-orange-500">lanza</span>
-            </span>
+          <Image alt="triplanza-logo" src="/logo.png" width={200} height={200}/>
           </Link>
 
           {/* Navigation Items */}

@@ -7,7 +7,7 @@ import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import Link from "next/link";
 
 const categories = [
-  "All",
+  "All Type",
   "Lakes",
   "Wildlife",
   "Temples",
@@ -17,13 +17,13 @@ const categories = [
 ];
 
 export default function ExploreSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All Type");
   const [searchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const filteredPlaces = explorePlaces.filter((place) => {
     const matchesCategory =
-      selectedCategory === "All" || place.category === selectedCategory;
+      selectedCategory === "All Type" || place.category === selectedCategory;
     const matchesSearch =
       place.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       place.location.toLowerCase().includes(searchQuery.toLowerCase());
@@ -37,9 +37,9 @@ export default function ExploreSection() {
   };
 
   return (
-    <section className="pb-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="flex items-center space-x-4 mx-auto justify-center">
             {/* Left SVG */}
             <svg
@@ -54,7 +54,7 @@ export default function ExploreSection() {
             </svg>
 
             {/* Heading */}
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl text-gray-900">
               Explore best travel places
             </h2>
 
@@ -77,7 +77,7 @@ export default function ExploreSection() {
             </svg>
           </div>
 
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black/50 mt-6 max-w-2xl mx-auto">
             Discover trips that match your flexible lifestyle.
           </p>
         </div>
@@ -89,10 +89,10 @@ export default function ExploreSection() {
               <button
                 key={category}
                 onClick={() => handleCategoryChange(category)}
-                className={`px-6 py-3 rounded-full text-base font-medium transition-all duration-300 transform hover:scale-105 ${
+                className={`px-10 py-3 text-md rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                   selectedCategory === category
                     ? "bg-orange-500 text-white shadow-lg hover:bg-orange-600"
-                    : "bg-white text-gray-600 hover:bg-orange-50 border-2 border-gray-200"
+                    : "bg-gray-200 text-gray-500 hover:bg-orange-50 border-2 border-gray-200"
                 }`}
               >
                 {category}
@@ -141,7 +141,7 @@ export default function ExploreSection() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors">
+                    <h3 className="text-2xl text-gray-900 group-hover:text-orange-500 transition-colors">
                       {place.title}
                     </h3>
                   </div>
@@ -340,7 +340,7 @@ export default function ExploreSection() {
           )}
         </div>
         <div className="flex justify-end mt-12">
-          <button className="bg-white text-black border-[1px] border-orange-500 px-8 py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
+          <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
             Explore More
           </button>
         </div>

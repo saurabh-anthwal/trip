@@ -48,10 +48,29 @@ export default function StatsSection() {
           <div className="absolute -top-[4rem] right-0 -left-[18rem] w-[312px] h-[305px] bg-[#FF7F00]/20 blur-[98px] z-10"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <h3 className="text-[55px] font-semibold leading-[66px] text-[#808080] text-center font-poppins">
-                  {stat.label}
-                </h3>
+              <div
+                key={index}
+                className={`text-start py-10 ${
+                  index < 3 ? "border-r-2 border-gray-500" : ""
+                }`}
+              >
+                <div className="text-[55px] flex gap-4 items-center justify-start font-semibold leading-[66px] text-[#808080] text-center font-poppins">
+                  <h3>{stat.label}</h3>
+                  <div className="p-2 rounded-full border border-gray-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 15 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.20711 0.496994C7.81658 0.10647 7.18342 0.10647 6.79289 0.496994L0.428932 6.86096C0.0384078 7.25148 0.0384078 7.88465 0.428932 8.27517C0.819457 8.66569 1.45262 8.66569 1.84315 8.27517L7.5 2.61831L13.1569 8.27517C13.5474 8.66569 14.1805 8.66569 14.5711 8.27517C14.9616 7.88465 14.9616 7.25148 14.5711 6.86096L8.20711 0.496994ZM8.5 19.2041L8.5 1.2041H6.5L6.5 19.2041H8.5Z"
+                        fill="#FF7F00"
+                      />
+                    </svg>
+                  </div>
+                </div>
                 <p className="mt-2 text-[19px] font-normal leading-[22.8px] text-[#808080]">
                   {stat.description}
                 </p>

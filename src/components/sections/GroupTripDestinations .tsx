@@ -37,7 +37,7 @@ const packages = [
 
 export default function GroupTripDestinations() {
   return (
-    <div className=" bg-white">
+    <div className="bg-white">
       <div className="text-center mb-12 flex items-center justify-center gap-4 pt-6">
         <div>
           <div className="flex items-center justify-center gap-4">
@@ -268,6 +268,11 @@ export default function GroupTripDestinations() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-end mt-12 max-w-7xl mx-auto px-4">
+          <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
+            Explore More
+          </button>
       </div>
     </div>
   );

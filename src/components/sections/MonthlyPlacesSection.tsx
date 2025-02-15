@@ -10,7 +10,7 @@ interface Place {
 
 export default function MonthlyPlacesSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 mx-auto flex flex-col">
           <div className="flex items-center justify-center gap-4">
