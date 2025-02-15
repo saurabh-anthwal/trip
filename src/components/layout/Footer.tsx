@@ -8,7 +8,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-[#111] py-12">
+    <div className="bg-white">
+    <footer className="bg-white text-[#111] py-12 max-w-7xl mx-auto">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Flexbox Layout for 5 Columns */}
         <div className="flex flex-wrap justify-between gap-8">
@@ -217,5 +218,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </div>
   );
 }

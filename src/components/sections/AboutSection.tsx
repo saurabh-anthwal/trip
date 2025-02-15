@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-white pt-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-12">
           {/* Section Title */}
@@ -39,7 +39,7 @@ export default function AboutSection() {
           </div>
 
           {/* Main Content */}
-          <div className="max-w-6xl mx-auto text-3xl text-black">
+          <div className="md:text-3xl text-lg text-black md:leading-[3rem]">
             <h3>
               We&apos;re committed to making travel planning easy and enjoyable
               <span className="text-gray-500"> for every client.</span>
