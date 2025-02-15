@@ -1,29 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from "next/image";
 
-const slides = [
-  { id: 1, text: "Welcome to Our Travel Agency!" },
-  { id: 2, text: "Explore the Beauty of Nature!" },
-  { id: 3, text: "Book Your Next Adventure with Us!" },
-];
-
 const BannerSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
-  };
-
   return (
     <div className="relative bg-white pt-24 pb-4">
       <div className="relative w-full max-w-7xl mx-auto bg-white">
@@ -43,16 +25,18 @@ const BannerSection = () => {
                 className="rounded-lg"
                 priority
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white px-4">
-                <h2 className="text-white text-center font-poppins text-5xl md:text-[55px] font-semibold leading-[120%]">
-                  Ready to take the first step toward experiencing the thrill of
-                  river rafting?
-                </h2>
-                <p className="mt-3 text-white text-center  text-2xl md:text-[24px] font-normal leading-[120%] max-w-2xl">
-                  Plan your ultimate river rafting adventure in seconds! Custom
-                  itineraries, automated reminders, and seamless bookings make
-                  your rafting trip planning easier than ever.
-                </p>
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center sm:items-center text-white px-4 sm:px-0">
+                <div className="max-w-[90%] sm:max-w-2xl mx-auto text-left sm:text-center">
+                  <h2 className="text-white font-poppins text-xl sm:text-5xl font-semibold leading-snug sm:leading-[120%]">
+                    Ready to take the first step toward experiencing the thrill
+                    of river rafting?
+                  </h2>
+                  <p className="mt-3 text-white text-sm sm:text-[24px] font-normal leading-snug sm:leading-[120%]">
+                    Plan your ultimate river rafting adventure in seconds!
+                    Custom itineraries, automated reminders, and seamless
+                    bookings make your rafting trip planning easier than ever.
+                  </p>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -67,16 +51,18 @@ const BannerSection = () => {
                 className="rounded-lg"
                 priority
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white px-4">
-                <h2 className="text-white text-center font-poppins text-5xl md:text-[55px] font-semibold leading-[120%]">
-                  Ready to take the first step toward experiencing the thrill of
-                  river rafting?
-                </h2>
-                <p className="mt-3 text-white text-center  text-2xl md:text-[24px] font-normal leading-[120%] max-w-2xl">
-                  Plan your ultimate river rafting adventure in seconds! Custom
-                  itineraries, automated reminders, and seamless bookings make
-                  your rafting trip planning easier than ever.
-                </p>
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center sm:items-center text-white px-4 sm:px-0">
+                <div className="max-w-[90%] sm:max-w-2xl mx-auto text-left sm:text-center">
+                  <h2 className="text-white font-poppins text-xl sm:text-5xl font-semibold leading-snug sm:leading-[120%]">
+                    Ready to take the first step toward experiencing the thrill
+                    of river rafting?
+                  </h2>
+                  <p className="mt-3 text-white text-sm sm:text-[24px] font-normal leading-snug sm:leading-[120%]">
+                    Plan your ultimate river rafting adventure in seconds!
+                    Custom itineraries, automated reminders, and seamless
+                    bookings make your rafting trip planning easier than ever.
+                  </p>
+                </div>
               </div>
             </div>
           </SwiperSlide>

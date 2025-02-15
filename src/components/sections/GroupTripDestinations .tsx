@@ -51,9 +51,10 @@ export default function GroupTripDestinations() {
               <circle cx="24.5" cy="6" r="6" fill="#FF7F00" />
               <path d="M23.5 6H0" stroke="#FF7F00" />
             </svg>
-            <h2 className="text-[42px] font-normal leading-[50.4px] text-black text-center font-poppins">
+            <h2 className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
               Best Travel Destinations
             </h2>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="31"
@@ -72,7 +73,7 @@ export default function GroupTripDestinations() {
             </svg>
           </div>
 
-          <p className="mt-2 text-[42px] font-normal leading-[50.4px] text-black text-center font-poppins">
+          <p className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
             for Group Trips
           </p>
         </div>
@@ -131,7 +132,7 @@ export default function GroupTripDestinations() {
                     </defs>
                   </svg>
                 </span>
-                <span className="text-[14px] font-normal leading-[16.8px] text-[#808080] font-poppins">
+                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
                   {pkg.location}
                 </span>
 
@@ -209,7 +210,7 @@ export default function GroupTripDestinations() {
                     />
                   </svg>
                 </span>
-                <span className="text-[14px] font-normal leading-[16.8px] text-[#808080] font-poppins">
+                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
                   {pkg.duration}
                 </span>
               </div>
@@ -235,14 +236,14 @@ export default function GroupTripDestinations() {
                     fill="#FF7F00"
                   />
                 </svg>
-                <span className="text-[14px] font-normal leading-[16.8px] text-[#808080] font-poppins">
+                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
                   {pkg.group}
                 </span>
               </div>
 
               <div className="flex justify-between items-center mt-4">
                 <div>
-                  <p className="text-[19px] text-[rgba(12,17,31,0.60)] font-poppins font-normal leading-[22.8px] mt-4 my-2">
+                  <p className="text-base md:text-lg text-[rgba(12,17,31,0.60)] font-poppins font-normal leading-snug mt-4 my-2">
                     Starts From
                   </p>
 
@@ -270,9 +271,9 @@ export default function GroupTripDestinations() {
         ))}
       </div>
       <div className="flex justify-end mt-12 max-w-7xl mx-auto px-4">
-          <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
-            Explore More
-          </button>
+        <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
+          Explore More
+        </button>
       </div>
     </div>
   );

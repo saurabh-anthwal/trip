@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
                 <path d="M7 6H30.5" stroke="#FF7F00" />
               </svg>
 
-              <h2 className="text-4xl font-normal text-black leading-[50.4px] text-center">
+              <h2 className="text-3xl sm:text-4xl font-normal text-black leading-10 text-center">
                 See What Travelers Are Saying
               </h2>
 
@@ -51,29 +51,23 @@ export default function TestimonialsSection() {
               </svg>
             </div>
           </div>
-
-          {/* Slider Container */}
-          <div className="relative w-full flex items-center justify-center">
-            {/* Left Button */}
+          <div className="relative flex flex-wrap items-center justify-center w-full">
             <button
               onClick={handlePrev}
-              className="absolute md:left-[-50px] left-0 bg-gray-300 p-3 text-gray-800 rounded-full shadow-md"
+              className="absolute left-2 sm:left-[-50px] bg-gray-300 p-3 text-gray-800 rounded-full shadow-md"
             >
-              <FaArrowLeft/>
+              <FaArrowLeft />
             </button>
-
-            {/* Testimonial Box */}
-            <div className="flex items-center gap-20 justify-between bg-gray-100 p-6 rounded-xl shadow-lg h-[361px] w-full max-w-7xl">
-              <div className="flex-1 pr-6">
-                <p className="text-[#5E6282] text-[21.282px] font-medium leading-[34px]">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-20 bg-gray-100 p-4 sm:p-6 rounded-xl shadow-lg w-full">
+              <div className="flex-1 text-center sm:text-left">
+                <p className="text-gray-600 text-base sm:text-xl font-medium leading-6 sm:leading-8">
                   {testimonials[currentIndex].comment}
                 </p>
 
-                <h4 className="text-[#5E6282] font-poppins text-[24px] font-semibold leading-[28.8px] mt-[89px]">
+                <h4 className="text-gray-900 font-semibold text-lg sm:text-2xl mt-4 sm:mt-8">
                   {testimonials[currentIndex].name}
                 </h4>
-
-                <div className="flex mt-1">
+                <div className="flex justify-center sm:justify-start mt-2">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon
                       key={i}
@@ -86,22 +80,19 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
               </div>
-
-              <div className="rounded-xl overflow-hidden">
+              <div className="rounded-xl overflow-hidden order-first sm:order-none">
                 <Image
                   src={testimonials[currentIndex].image}
                   alt={testimonials[currentIndex].name}
-                  width={280}
-                  height={280}
-                  className=""
+                  width={200}
+                  height={200}
+                  className="w-32 h-32 sm:w-60 sm:h-60 rounded-xl object-cover"
                 />
               </div>
             </div>
-
-            {/* Right Button */}
             <button
               onClick={handleNext}
-              className="absolute md:right-[-50px] right-0 text-gray-800 bg-gray-300 p-3 rounded-full shadow-md"
+              className="absolute right-2 sm:right-[-50px] text-gray-800 bg-gray-300 p-3 rounded-full shadow-md"
             >
               <FaArrowRight />
             </button>

@@ -24,7 +24,7 @@ export default function MonthlyPlacesSection() {
               <circle cx="6" cy="6" r="6" fill="#FF7F00" />
               <path d="M7 6H30.5" stroke="#FF7F00" />
             </svg>
-            <h2 className="text-[42px] font-normal text-black text-center leading-[50.4px]">
+            <h2 className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
               Best Places by the month
             </h2>
             <svg
@@ -63,11 +63,11 @@ export default function MonthlyPlacesSection() {
                 <div className="absolute inset-0  bg-opacity-40 group-hover:bg-opacity-50 transition-opacity" />
                 <div className="absolute bottom-0 left-0 right-0 top-1 p-4 text-white text-center">
                   <div className="flex items-center text-sm justify-center">
-                    <span className="text-white text-center font-puppies text-[16.8px] leading-[32.2px]">
+                    <span className="text-white text-center font-poppins text-base leading-8">
                       {place.location}
                     </span>
                   </div>
-                  <h3 className="text-white text-center font-poppins text-[26.8px] font-semibold leading-[32.2px] mb-1">
+                  <h3 className="text-white text-center font-poppins text-2xl font-semibold leading-8 mb-1">
                     {place.title}
                   </h3>
                 </div>
