@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-          <Image alt="triplanza-logo" src="/logo.png" width={200} height={200}/>
+          <Image alt="triplanza-logo" src="/logo.png" className='w-28 md:w-48' width={200} height={200}/>
           </Link>
 
           {/* Navigation Items */}
@@ -28,7 +28,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors"
+                  className="hover:bg-orange-500 text-gray-600 hover:text-white px-6 py-2 rounded-full transition-colors"
                 >
                   {item.label}
                 </Link>

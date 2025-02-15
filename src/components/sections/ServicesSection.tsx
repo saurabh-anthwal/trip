@@ -27,7 +27,7 @@ export default function ServicesSection() {
           </svg>
 
           {/* Heading */}
-          <h2 className="text-4xl text-gray-900">
+          <h2 className="md:text-4xl text-lg text-gray-900">
             What Services We Provide
           </h2>
 

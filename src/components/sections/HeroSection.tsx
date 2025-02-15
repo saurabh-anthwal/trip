@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="relative bg-gradient-to-b from-orange-50 to-white h-auto pt-20">
-      <div className="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-b from-orange-50 to-white h-auto md:pt-20">
+      <div className="px-4 max-w-7xl md:ml-40 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row  justify-between">
           {/* Left Content */}
-          <div className="lg:w-2/3 space-y-6 pt-[100px]">
-            <div className="inline-flex items-center bg-white px-[31.558px] py-[15.779px] gap-[15.779px] rounded-[98.617px] shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
-              <span className="text-[14px] font-semibold text-[#FF7F00] leading-[120%] font-poppins">
+          <div className="lg:w-full space-y-6 pt-[100px]">
+            <div className="inline-flex items-center md:bg-white px-8 py-3 gap-2 rounded-full shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
+              <span className="text-sm font-semibold text-[#FF7F00] leading-[120%] font-poppins">
                 Explore the world!
               </span>
               <svg
@@ -29,40 +29,40 @@ export default function HeroSection() {
               </svg>
             </div>
 
-            <h1 className="text-7xl text-black font-poppins font-semibold leading-[86.4px]">
-              Book With Us<br/> And
-              <span className="text-[#FF7F00]"> Enjoy</span> Your
+            <h1 className="md:text-7xl text-4xl text-black font-poppins font-semibold md:leading-[86.4px] leading-[50px]">
+              Book With Us<br/> And <span className="text-[#FF7F00]"> Enjoy</span> Your
               <br />
-              <span className="text-[#FF7F00]">Journey!</span>
+              <span className="text-[#FF7F00]">Trip!</span>
             </h1>
 
-            <p className="text-gray-600 text-xl">
+            <p className="text-gray-600 text-md md:text-xl">
               Where adventure meets comfort. We create unforgettable travel
               experiences{" "}
             </p>
 
-            <button className="bg-[#FF7F00] text-xl text-white px-12 py-4 rounded-full hover:bg-orange-600 transition-colors">
+          <div className="flex flex-row md:justify-start justify-end">
+          <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
               Get Started
             </button>
           </div>
+          </div>
 
           {/* Right Content - Image with Floating Elements */}
-          <div className="w-full relative mt-10 lg:mt-0">
-            <div className="relative h-[740px]">
+          <div className="w-full relative md:mt-10 lg:mt-0">
+            <div className="relative h-[350px] md:h-[500px] mt-20">
               {/* Main circular background */}
-              <div className="absolute inset-0 rounded-full overflow-hidden">
+              <div className="absolute">
                 <Image
-                  src="/home-img/saurabh.png"
+                  src="/home-img/image.png"
                   alt="Happy traveler"
-                  // fill
-                  width={900}
+                  width={1000}
                   height={900}
-                  className="w-[full"
+                  // className="w-full h-full"
                 />
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute bottom-[14rem] left-[8.5rem] bg-white text-black rounded-full shadow-lg px-4 py-2">
+              <div className="absolute md:bottom-[6rem] md:left-[0rem] bottom-32 bg-white text-black text-xs md:text-lg rounded-full shadow-lg px-4 py-2">
                 <div className="flex items-center space-x-2">
                   <span>
                     <svg
@@ -84,7 +84,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="absolute bottom-[8.3rem] right-[12.5rem] bg-white text-black rounded-full shadow-lg px-4 py-2">
+              <div className="absolute md:bottom-[3rem] md:right-[8rem] bottom-24 right-4 bg-white text-black text-xs md:text-lg rounded-full shadow-lg px-4 py-2">
                 <div className="flex items-center space-x-2">
                   <span>
                     <svg
@@ -104,7 +104,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="absolute bottom-[17rem] right-[13%] bg-white text-black rounded-lg shadow-lg px-4 py-2 flex items-center space-x-2">
+              <div className="absolute md:top-[17rem] md:right-[8%] top-28 right-[-10px] bg-white text-black rounded-lg shadow-lg px-4 py-2 flex items-center space-x-2">
                 {/* Full SVG Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,8 +136,8 @@ export default function HeroSection() {
                 </svg>
                 {/* Text Content */}
                 <div>
-                  <p className="text-orange-500 font-bold">5000+</p>
-                  <p className="text-sm text-gray-500">Customers</p>
+                  <p className="text-orange-500 font-bold text-xs md:text-lg">5000+</p>
+                  <p className="text-gray-500 text-xs md:text-lg">Customers</p>
                 </div>
               </div>
             </div>
