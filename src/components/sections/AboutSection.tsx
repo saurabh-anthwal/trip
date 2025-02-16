@@ -1,8 +1,8 @@
 export default function AboutSection() {
   return (
-    <section className="bg-white pt-2">
+    <section className="bg-white pt-2 md:pt-60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-12">
+        <div className="text-center">
           {/* Section Title */}
           <div className="inline-flex items-center space-x-2">
             <svg
@@ -39,7 +39,7 @@ export default function AboutSection() {
           </div>
 
           {/* Main Content */}
-          <div className="md:text-3xl text-lg text-black md:leading-[3rem]">
+          <div className="md:text-3xl text-lg text-black md:leading-[3rem]  pt-6">
             <h3>
               We&apos;re committed to making travel planning easy and enjoyable
               <span className="text-gray-500"> for every client.</span>

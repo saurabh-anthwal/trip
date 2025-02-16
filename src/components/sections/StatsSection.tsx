@@ -17,7 +17,7 @@ export default function StatsSection() {
                 <circle cx="24.5" cy="6" r="6" fill="#FF7F00" />
                 <path d="M23.5 6H0" stroke="#FF7F00" />
               </svg>
-              <h2 className="text-3xl md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
+              <h2 className="text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
                 Truth, Growth, and Excellence
               </h2>
 
@@ -39,7 +39,7 @@ export default function StatsSection() {
               </svg>
             </div>
 
-            <p className="mt-2 text-3xl md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
+            <p className="mt-2 text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
               of our journey!
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function StatsSection() {
 
         <div className="relative">
           <div className="absolute -top-[4rem] right-0 -left-[18rem] w-[312px] h-[305px] bg-[#FF7F00]/20 blur-[98px] z-10"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-5 md:px-0 relative z-10">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -58,7 +58,7 @@ export default function StatsSection() {
                   index == 0 || index == 2 ? "border-r-2 border-gray-500" : ""
                 }`}
               >
-                <div className="text-3xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-500 text-center font-poppins">
+                <div className="text-2xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-500 text-center font-poppins">
                   <h3>{stat.label}</h3>
                   <div className="p-2 rounded-full border border-gray-500">
                     <svg

@@ -2,10 +2,9 @@ import Image from "next/image";
 
 export default function ServicesSection() {
   return (
-    <section className="pb-24 bg-gradient-to-b from-white to-gray-50">
-      
+    <section className="pb-4 md:pb-24 bg-gradient-to-b from-white to-gray-50">
       <div className="flex flex-col items-center px-6 pt-10">
-        <div className="flex items-center space-x-4 mx-auto justify-center my-8">
+        <div className="flex items-center space-x-4 mx-auto justify-center my-2 md:my-8">
           {/* Left SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +45,7 @@ export default function ServicesSection() {
         </h2>
 
         <div className="flex flex-col md:flex-row w-full justify-center max-w-7xl items-start gap-12">
-          <div className="relative w-full h-[577px] rounded-xl overflow-hidden">
+        <div className="relative w-full h-[577px] rounded-xl overflow-hidden hidden md:block">
             <Image
               src="/home-img/Badrinath_temple.png"
               alt="Main Image"
@@ -100,6 +99,15 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
+
+          <div className="relative w-full h-[350px] rounded-xl overflow-hidden block md:hidden">
+            <Image
+              src="/home-img/mobile_chardham.png"
+              alt="Main Image"
+              fill
+              className="object-cover w-full h-full"
+            />
+          </div>
           <div className="mt-4 w-full">
             {[
               { number: 1, title: "Find Trip That Fit a flexible lifestyle" },
@@ -112,9 +120,10 @@ export default function ServicesSection() {
                 </span>
 
                 <div>
-                  <h3 className="text-[32px] font-normal leading-[38.4px] text-black font-[Poppins] mb-3">
+                  <h3 className="text-lg md:text-3xl font-normal leading-snug text-black font-poppins mb-3">
                     {item.title}
                   </h3>
+
                   <p className="text-[14px] font-normal leading-[16.8px] text-black font-[Poppins]">
                     <span className="text-black/50 font-normal">
                       {" "}

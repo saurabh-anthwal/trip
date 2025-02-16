@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <div className="relative bg-gradient-to-b from-orange-50 to-white h-auto md:pt-20">
-      <div className="px-4 max-w-7xl md:ml-40 sm:px-6 lg:px-8">
+      <div className="px-4  md:ml-40 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row  justify-between">
           {/* Left Content */}
           <div className="lg:w-full space-y-6 pt-[100px]">
@@ -30,21 +30,23 @@ export default function HeroSection() {
             </div>
 
             <h1 className="md:text-7xl text-4xl text-black font-poppins font-semibold md:leading-[86.4px] leading-[50px]">
-              Book With Us<br/> And <span className="text-[#FF7F00]"> Enjoy</span> Your
+              Book With Us
+              <br /> And <span className="text-[#FF7F00]"> Enjoy</span> Your
               <br />
               <span className="text-[#FF7F00]">Trip!</span>
             </h1>
 
             <p className="text-gray-600 text-md md:text-xl">
-              Where adventure meets comfort. We create unforgettable travel
+              Where adventure meets comfort. We create unforgettable travel{" "}
+              <br />
               experiences{" "}
             </p>
 
-          <div className="flex flex-row md:justify-start justify-end">
-          <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
-              Get Started
-            </button>
-          </div>
+            <div className="flex flex-row md:justify-start justify-start">
+              <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
+                Get Started
+              </button>
+            </div>
           </div>
 
           {/* Right Content - Image with Floating Elements */}
@@ -136,7 +138,9 @@ export default function HeroSection() {
                 </svg>
                 {/* Text Content */}
                 <div>
-                  <p className="text-orange-500 font-bold text-xs md:text-lg">5000+</p>
+                  <p className="text-orange-500 font-bold text-xs md:text-lg">
+                    5000+
+                  </p>
                   <p className="text-gray-500 text-xs md:text-lg">Customers</p>
                 </div>
               </div>

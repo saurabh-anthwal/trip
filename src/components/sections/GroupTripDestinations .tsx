@@ -53,7 +53,7 @@ export default function GroupTripDestinations() {
               <circle cx="24.5" cy="6" r="6" fill="#FF7F00" />
               <path d="M23.5 6H0" stroke="#FF7F00" />
             </svg>
-            <h2 className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
+            <h2 className="text-lg md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
               Best Travel Destinations
             </h2>
 
@@ -75,17 +75,18 @@ export default function GroupTripDestinations() {
             </svg>
           </div>
 
-          <p className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
+          <p className="text-lg md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
             for Group Trips
           </p>
         </div>
       </div>
 
-      <div className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
-                  style={{
-                    scrollbarWidth: "none", 
-                    msOverflowStyle: "none"
-                  }}
+      <div
+        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
       >
         {packages.map((pkg) => (
           <div
@@ -97,8 +98,9 @@ export default function GroupTripDestinations() {
               alt={pkg.title}
               width={385}
               height={273}
-              className="rounded-xl object-cover w-full h-[273px]"
+              className="rounded-xl object-cover w-full h-[189px] md:h-[273px]"
             />
+
             <div className="p-4">
               <h3 className="font-semibold text-lg text-gray-900">
                 {pkg.title}
@@ -261,7 +263,7 @@ export default function GroupTripDestinations() {
                     </span>
                   </p>
                 </div>
-                <div className="w-[39px] h-[70px] flex-shrink-0 rounded-[15px] bg-[#D9D9D9] text-center flex items-center justify-center flex-col">
+                <div className="hidden md:flex w-[39px] h-[70px] flex-shrink-0 rounded-[15px] bg-[#D9D9D9] text-center items-center justify-center flex-col">
                   <p className="text-[19px] font-normal leading-[22.8px] text-black font-poppins">
                     {pkg.date.split(" ")[0]}
                   </p>
@@ -271,31 +273,31 @@ export default function GroupTripDestinations() {
                 </div>
               </div>
               <div className="flex items-center justify-end mt-2 space-x-1 text-orange-500">
-                      {/* Show only on hover */}
-                      <div className="border border-black rounded-full p-1 block group-hover:hidden">
-                        <p className="h-2 w-2 rounded-full bg-[#FF7F00]"></p>
-                      </div>
+                {/* Show only on hover */}
+                <div className="border border-black rounded-full p-1 block group-hover:hidden">
+                  <p className="h-2 w-2 rounded-full bg-[#FF7F00]"></p>
+                </div>
 
-                      {/* Default icon (hidden on hover) */}
-                      <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
-                        <FaArrowRightLong />
-                      </div>
-                      <Link
-                        href="#"
-                        className="text-[19px] font-normal leading-[22.8px] text-[#FF7F00] font-poppins"
-                      >
-                        Requ
-                        <span className="border-b border-orange-500 transition-all duration-700 hover:border-transparent">
-                          est a call
-                        </span>
-                      </Link>
-                    </div>
+                {/* Default icon (hidden on hover) */}
+                <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
+                  <FaArrowRightLong />
+                </div>
+                <Link
+                  href="#"
+                  className="text-[19px] font-normal leading-[22.8px] text-[#FF7F00] font-poppins"
+                >
+                  Requ
+                  <span className="border-b border-orange-500 transition-all duration-700 hover:border-transparent">
+                    est a call
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
       </div>
       <div className="flex justify-end mt-12 max-w-7xl mx-auto px-4">
-        <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
+        <button  className="bg-white text-black border-[1px] border-orange-500 px-10 py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors text-lg md:text-[20px]">
           Explore More
         </button>
       </div>

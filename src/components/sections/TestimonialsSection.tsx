@@ -22,8 +22,10 @@ export default function TestimonialsSection() {
     <section className="bg-white relative">
       <div className="max-w-7xl mx-auto py-10 relative">
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4">
+        <div className="text-center mb-4 md:mb-12">
+
+          <div className="flex items-center justify-center gap-2 md:gap-4">
+
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -35,7 +37,7 @@ export default function TestimonialsSection() {
                 <path d="M7 6H30.5" stroke="#FF7F00" />
               </svg>
 
-              <h2 className="text-3xl sm:text-4xl font-normal text-black leading-10 text-center">
+              <h2 className="text-lg sm:text-4xl font-normal text-black leading-10 text-center">
                 See What Travelers Are Saying
               </h2>
 

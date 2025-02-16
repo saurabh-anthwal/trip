@@ -23,7 +23,7 @@ export default function MonthlyPlacesSection() {
             <circle cx="6" cy="6" r="6" fill="#FF7F00" />
             <path d="M7 6H30.5" stroke="#FF7F00" />
           </svg>
-          <h2 className="text-3xl md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
+          <h2 className="text-lg md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
             Best Places by the month
           </h2>
           <svg
