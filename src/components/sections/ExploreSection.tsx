@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import { explorePlaces } from "@/data/mockData";
 import Link from "next/link";
@@ -37,7 +38,6 @@ export default function ExploreSection() {
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <div className="flex items-center space-x-4 mx-auto justify-center">
             {/* Left SVG */}
@@ -82,26 +82,34 @@ export default function ExploreSection() {
         </div>
 
         {/* Search and Filter */}
-        <div className="mb-12 space-y-6">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => handleCategoryChange(category)}
-                className={`px-10 py-3 text-md rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                  selectedCategory === category
-                    ? "bg-orange-500 text-white shadow-lg hover:bg-orange-600"
-                    : "bg-gray-200 text-gray-500 hover:bg-orange-50 border-2 border-gray-200"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+        <div className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto mb-4  gap-4"
+                  style={{
+                    scrollbarWidth: "none", 
+                    msOverflowStyle: "none"
+                  }}
+      >
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryChange(category)}
+                  className={`md:px-10 md:py-3 md:text-md px-4 py-2 text-xs rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
+                    selectedCategory === category
+                      ? "bg-orange-500 text-white shadow-lg hover:bg-orange-600"
+                      : "bg-gray-200 text-gray-500 hover:bg-orange-50 border-2 border-gray-200"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
           </div>
-        </div>
 
         {/* Places Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+        <div className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+                  style={{
+                    scrollbarWidth: "none", 
+                    msOverflowStyle: "none"
+                  }}
+      >
           {isLoading ? (
             Array.from({ length: 8 }).map((_, idx) => (
               <div
@@ -126,14 +134,14 @@ export default function ExploreSection() {
             filteredPlaces.map((place) => (
               <div
                 key={place.id}
-                className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                className="group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-600 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="relative h-[273px] overflow-hidden">
                   <Image
                     src="/home-img/kedarnath.png"
                     alt={place.title}
                     fill
-                    className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover rounded-3xl transform group-hover:scale-110 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -321,14 +329,22 @@ export default function ExploreSection() {
                       </p>
                     </div>
                     <div className="flex items-center space-x-1 text-orange-500">
-                      <span className="w-[4px] h-[4px] rounded-full bg-[#FF7F00] inline-block"></span>
+                      {/* Show only on hover */}
+                      <div className="border border-black rounded-full p-1 block group-hover:hidden">
+                        <p className="h-2 w-2 rounded-full bg-[#FF7F00]"></p>
+                      </div>
+
+                      {/* Default icon (hidden on hover) */}
+                      <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
+                        <FaArrowRightLong />
+                      </div>
                       <Link
                         href="#"
                         className="text-[19px] font-normal leading-[22.8px] text-[#FF7F00] font-poppins"
                       >
                         Requ
-                        <span className="underline underline-offset-2">
-                          est A Call
+                        <span className="border-b border-orange-500 transition-all duration-700 hover:border-transparent">
+                          est a call
                         </span>
                       </Link>
                     </div>
@@ -338,12 +354,11 @@ export default function ExploreSection() {
             ))
           )}
         </div>
-        <div className="flex justify-end mt-12">
+        <div className="flex justify-end mt-12  max-w-7xl mx-auto px-4">
           <button className="bg-white text-black border-[1px] border-orange-500 px-10 text-xl py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors">
             Explore More
           </button>
         </div>
-      </div>
     </section>
   );
 }

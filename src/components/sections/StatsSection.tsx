@@ -52,7 +52,10 @@ export default function StatsSection() {
               <div
                 key={index}
                 className={`text-start py-10 ${
-                  index < 3 ? "border-r-2 border-gray-500" : ""
+                  index < 3 ? "md:border-r-2 md:border-gray-500" : ""
+                } 
+                ${
+                  index == 0 || index == 2 ? "border-r-2 border-gray-500" : ""
                 }`}
               >
                 <div className="text-3xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-500 text-center font-poppins">

@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const packages = [
   {
@@ -79,11 +81,16 @@ export default function GroupTripDestinations() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-6 flex-wrap p-6 bg-white">
+      <div className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+                  style={{
+                    scrollbarWidth: "none", 
+                    msOverflowStyle: "none"
+                  }}
+      >
         {packages.map((pkg) => (
           <div
             key={pkg.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden  border"
+            className="bg-white rounded-2xl min-w-[85%] md:min-w-[25%] shadow-lg overflow-hidden  border"
           >
             <Image
               src={pkg.image}
@@ -263,9 +270,26 @@ export default function GroupTripDestinations() {
                   </p>
                 </div>
               </div>
-              <div className="mt-4 text-[#FF7F00] text-[19px] font-normal leading-[22.8px] font-poppins cursor-pointer text-right">
-                ∘ Request A Call
-              </div>
+              <div className="flex items-center justify-end mt-2 space-x-1 text-orange-500">
+                      {/* Show only on hover */}
+                      <div className="border border-black rounded-full p-1 block group-hover:hidden">
+                        <p className="h-2 w-2 rounded-full bg-[#FF7F00]"></p>
+                      </div>
+
+                      {/* Default icon (hidden on hover) */}
+                      <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
+                        <FaArrowRightLong />
+                      </div>
+                      <Link
+                        href="#"
+                        className="text-[19px] font-normal leading-[22.8px] text-[#FF7F00] font-poppins"
+                      >
+                        Requ
+                        <span className="border-b border-orange-500 transition-all duration-700 hover:border-transparent">
+                          est a call
+                        </span>
+                      </Link>
+                    </div>
             </div>
           </div>
         ))}
