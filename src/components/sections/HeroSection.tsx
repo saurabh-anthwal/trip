@@ -55,7 +55,7 @@ export default function HeroSection() {
               {/* Main circular background */}
               <div className="absolute">
                 <Image
-                  src="/home-img/image.png"
+                  src="/home-img/Image.png"
                   alt="Happy traveler"
                   width={1000}
                   height={900}
