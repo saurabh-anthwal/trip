@@ -45,14 +45,14 @@ export default function ServicesSection() {
         </h2>
 
         <div className="flex flex-col md:flex-row w-full justify-center max-w-7xl items-start gap-12">
-        <div className="relative w-full h-[577px] rounded-xl overflow-hidden hidden md:block">
+          <div className="relative w-full h-[327px] sm:h-[577px] rounded-xl overflow-hidden">
             <Image
               src="/home-img/Badrinath_temple.png"
               alt="Main Image"
               fill
               className="object-cover w-full h-full"
             />
-            <div className="absolute top-[-4px] left-[-20px] bg-[#F9F9F9] shadow-lg rounded-[21px] border border-[#808080] flex items-center px-4 py-2 z-50 w-[234px] h-[84px]">
+            <div className="absolute top-0 left-0 bg-[#F9F9F9] shadow-lg rounded-xl border border-[#808080] flex items-center px-1 py-2 z-50 w-[50%] max-w-[234px] sm:w-[234px]">
               <Image
                 src="/home-img/Badrinath_temple.png"
                 alt="Kedarnath"
@@ -64,11 +64,10 @@ export default function ServicesSection() {
                 <p className="text-[14px] font-normal text-black leading-[16.8px]">
                   Kedarnath
                 </p>
-
-                <p>⭐⭐⭐⭐⭐</p>
+                <p className="text-xs sm:text-lg">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
-            <div className="absolute top-[50%] left-[60%] bg-white shadow-lg rounded-lg flex items-center px-4 py-2">
+            <div className="absolute top-[50%] right-0 transform -translate-y-1/2 bg-white shadow-lg rounded-lg flex items-center px-1 py-2 w-[50%] max-w-[200px] sm:w-[200px]">
               <Image
                 src="/home-img/badrinath-temple-rain.png"
                 alt="Badrinath"
@@ -80,10 +79,10 @@ export default function ServicesSection() {
                 <p className="text-[14px] font-normal text-black leading-[16.8px]">
                   Badrinath
                 </p>
-                <p>⭐⭐⭐⭐⭐</p>
+                <p className="text-xs sm:text-lg">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
-            <div className="absolute bottom-[0px] right-[0px] bg-white shadow-lg rounded-lg flex items-center px-4 py-2">
+            <div className="absolute bottom-[5%] right-0 bg-white shadow-lg rounded-lg flex items-center px-1 py-2 w-[50%] max-w-[200px] sm:w-[200px]">
               <Image
                 src="/home-img/Kedarnath_Temple.png"
                 alt="Gangotri"
@@ -95,19 +94,11 @@ export default function ServicesSection() {
                 <p className="text-[14px] font-normal text-black leading-[16.8px]">
                   Gangotri
                 </p>
-                <p>⭐⭐⭐⭐⭐</p>
+                <p className="text-xs sm:text-lg">⭐⭐⭐⭐⭐</p>
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[350px] rounded-xl overflow-hidden block md:hidden">
-            <Image
-              src="/home-img/mobile_chardham.png"
-              alt="Main Image"
-              fill
-              className="object-cover w-full h-full"
-            />
-          </div>
           <div className="mt-4 w-full">
             {[
               { number: 1, title: "Find Trip That Fit a flexible lifestyle" },
