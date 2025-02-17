@@ -10,7 +10,7 @@ interface Place {
 
 export default function MonthlyPlacesSection() {
   return (
-    <section className="max-w-7xl mx-auto py-10 bg-white">
+    <section className="max-w-7xl mx-auto py-10">
       <div className="text-center mb-12 mx-auto flex flex-col">
         <div className="flex items-center justify-center gap-4">
           <svg
@@ -46,7 +46,7 @@ export default function MonthlyPlacesSection() {
       </div>
 
       <div
-        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6  py-5 bg-transparent"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -55,7 +55,7 @@ export default function MonthlyPlacesSection() {
         {monthlyPlaces.map((place: Place) => (
           <div
             key={place.id}
-            className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 min-w-60 md:w-[22%] hover:bg-orange-500 p-0 snap-center hover:scale-105 hover:-translate-x-2"
+            className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-transform duration-300 min-w-60 md:w-[22%] hover:bg-orange-500 p-0 snap-center hover:scale-105 hover:-translate-x-2 hover:rounded-3xl"
           >
             <div className="relative h-full w-full hover:pb-6 hover:pr-4">
               <Image
