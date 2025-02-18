@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const ImageSections = () => {
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
       <div className="col-span-2">
         <Image
           src="/home-img/kedarnath.png"
@@ -14,7 +14,7 @@ const ImageSections = () => {
           className="rounded-lg object-cover w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="hidden sm:flex flex-col gap-2">
         <div className="h-[400px] bg-gray-300 rounded-lg"></div>
         <div className="grid grid-cols-2 gap-2">
           <div className="h-[250px] rounded-lg overflow-hidden">

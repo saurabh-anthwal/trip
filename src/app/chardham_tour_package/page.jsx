@@ -136,10 +136,11 @@ export default function ChardhamPackage() {
   return (
     <div className="container mx-auto p-4 text-gray-600">
       <ImageSections />
-      <div className="flex border-b mt-4 gap-6 text-black text-lg font-medium leading-[6]">
+      <div className="flex border-b mt-4 gap-3 sm:gap-6 text-base sm:text-lg font-medium leading-6 overflow-x-auto">
         <TabSwitch tabs={tabs} />
       </div>
-      <div className="mt-6 grid grid-cols-3 gap-6">
+
+      <div className="flex flex-col sm:flex-row gap-8 mt-6">
         <div className="col-span-2">
           <h1 className="text-gray-800 text-3xl font-medium leading-[normal]">
             Chardham Yatra Package
@@ -193,7 +194,7 @@ export default function ChardhamPackage() {
             Badrinath.
           </p>
 
-          <div className=" mx-auto pr-6 pt-6">
+          <div className="mx-auto pr-0 sm:pr-6 pt-6">
             <h2 className="text-[#535353] text-xl font-medium font-[Poppins] mb-6">
               Where are the Chardhams Situated
             </h2>
@@ -246,7 +247,7 @@ export default function ChardhamPackage() {
               </div>
             </div>
 
-            <div className="mx-auto pr-6 py-6">
+            <div className="mx-auto pr-0 sm:pr-6 pt-6">
               <div className="bg-green-100 p-6 rounded-lg mb-6">
                 <h2 className="text-black text-3xl font-medium leading-[38.4px] font-poppins">
                   Inclusions
