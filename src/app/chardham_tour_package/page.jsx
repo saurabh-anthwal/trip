@@ -158,29 +158,30 @@ export default function ChardhamPackage() {
               </p>
             ))}
           </div>
-          <div className="grid grid-cols-2 gap-8 mt-6">
+          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto">
             {services.map((service, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="bg-gray-100 p-3 rounded-full">
+              <div key={index} className="flex items-center gap-4 w-full">
+                <div className="bg-gray-100 p-2 sm:p-3 rounded-full">
                   <Image
                     src={service.imgSrc}
                     alt={service.name}
-                    width={40}
-                    height={40}
+                    width={30}
+                    height={30}
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="text-[20px] text-[#727272] font-medium leading-[120%]">
+                  <h3 className="text-lg sm:text-[20px] text-[#727272] font-medium leading-[120%]">
                     {service.name}
                   </h3>
-                  <p className="text-[14px] text-[#808080] leading-[120%]">
+                  <p className="text-sm sm:text-sm text-[#808080] leading-[120%] hidden sm:block">
                     {service.location}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
           <h2 className="text-gray-700 text-3xl font-medium leading-normal mt-6">
             Overview
           </h2>
@@ -200,12 +201,16 @@ export default function ChardhamPackage() {
             </h2>
             <div className="space-y-6">
               {dhams.map((dham, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-x-4"
+                >
                   <img
                     src={dham.image}
                     alt={dham.title}
-                    className="w-20 h-20 rounded-lg object-cover"
+                    className="w-[357px] h-[141px] sm:w-20 sm:h-20 rounded-lg object-cover"
                   />
+
                   <div>
                     <h3 className="text-[#535353] text-lg font-medium font-[Poppins]">
                       {dham.title}
@@ -222,7 +227,7 @@ export default function ChardhamPackage() {
                 Things To Pack
               </h2>
 
-              <div className="grid grid-cols-2 gap-8 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
                 {pack.map((service, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <div className="bg-gray-100 p-3 rounded-full">
