@@ -141,7 +141,7 @@ export default function ChardhamPackage() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
-        <div className="col-span-2">
+        <div className="col-span-2 w-full sm:w-[70%] ">
           <h1 className="text-gray-800 text-3xl font-medium leading-[normal]">
             Chardham Yatra Package
           </h1>
