@@ -8,6 +8,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
+import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
 
 export default function ChardhamPackage() {
   const tabs = [
@@ -251,6 +252,7 @@ export default function ChardhamPackage() {
                 ))}
               </div>
             </div>
+            <ChardhamItinerary />
 
             <div className="mx-auto pr-0 sm:pr-6 pt-6">
               <div className="bg-green-100 p-6 rounded-lg mb-6">
