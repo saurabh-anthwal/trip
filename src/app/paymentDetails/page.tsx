@@ -1,27 +1,43 @@
-'use client'
-import { useState } from 'react'
-import Image from 'next/image'
+"use client";
+import { useState } from "react";
+import Image from "next/image";
 
 export default function PaymentDetailsPage() {
-  const [selectedPayment, setSelectedPayment] = useState('credit')
+  const [selectedPayment, setSelectedPayment] = useState("credit");
 
   return (
     <div className="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="space-y-6">
-        <h2 className="text-xl font-semibold text-[#333]">Select a payment method</h2>
-        <div className={`border rounded-lg p-6 ${selectedPayment === 'credit' ? 'border-orange-500' : 'border-gray-200'}`}>
+        <h2 className="text-xl font-semibold text-[#333]">
+          Select a payment method
+        </h2>
+        <div
+          className={`border rounded-lg p-6 ${
+            selectedPayment === "credit"
+              ? "border-orange-500"
+              : "border-gray-200"
+          }`}
+        >
           <div className="flex items-center gap-3 mb-4">
             <input
               type="radio"
               id="credit"
               name="payment"
-              checked={selectedPayment === 'credit'}
-              onChange={() => setSelectedPayment('credit')}
+              checked={selectedPayment === "credit"}
+              onChange={() => setSelectedPayment("credit")}
               className="w-4 h-4 text-orange-500"
             />
-            <label htmlFor="credit" className="font-medium text-[#333]">Pay with Credit Card</label>
+            <label htmlFor="credit" className="font-medium text-[#333]">
+              Pay with Credit Card
+            </label>
             <div className="flex gap-2 ml-auto">
-              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="10" viewBox="0 0 29 10" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="10"
+                viewBox="0 0 29 10"
+                fill="none"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -29,31 +45,83 @@ export default function PaymentDetailsPage() {
                   fill="#28356A"
                 />
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="18" viewBox="0 0 26 18" fill="none">
-                <path d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z" fill="#ED0006" />
-                <path d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z" fill="#2F80ED" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z" fill="#6C6BBD" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="18"
+                viewBox="0 0 26 18"
+                fill="none"
+              >
+                <path
+                  d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z"
+                  fill="#ED0006"
+                />
+                <path
+                  d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z"
+                  fill="#2F80ED"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z"
+                  fill="#6C6BBD"
+                />
               </svg>
 
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="18" viewBox="0 0 26 18" fill="none">
-                <path d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z" fill="#ED0006" />
-                <path d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z" fill="#2F80ED" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z" fill="#6C6BBD" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="18"
+                viewBox="0 0 26 18"
+                fill="none"
+              >
+                <path
+                  d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z"
+                  fill="#ED0006"
+                />
+                <path
+                  d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z"
+                  fill="#2F80ED"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z"
+                  fill="#6C6BBD"
+                />
               </svg>
 
-
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="18" viewBox="0 0 26 18" fill="none">
-                <path d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z" fill="#ED0006" />
-                <path d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z" fill="#2F80ED" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z" fill="#6C6BBD" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="18"
+                viewBox="0 0 26 18"
+                fill="none"
+              >
+                <path
+                  d="M15.8745 8.6322C15.8745 13.2616 12.383 17.0144 8.07594 17.0144C3.76889 17.0144 0.277344 13.2616 0.277344 8.6322C0.277344 4.00284 3.76889 0.25 8.07594 0.25C12.383 0.25 15.8745 4.00284 15.8745 8.6322Z"
+                  fill="#ED0006"
+                />
+                <path
+                  d="M25.9917 8.6322C25.9917 13.2616 22.5002 17.0144 18.1931 17.0144C13.8861 17.0144 10.3945 13.2616 10.3945 8.6322C10.3945 4.00284 13.8861 0.25 18.1931 0.25C22.5002 0.25 25.9917 4.00284 25.9917 8.6322Z"
+                  fill="#2F80ED"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M13.1345 2.25195C14.8113 3.7894 15.8745 6.0771 15.8745 8.63171C15.8745 11.1863 14.8113 13.474 13.1345 15.0115C11.4578 13.474 10.3945 11.1863 10.3945 8.63171C10.3945 6.0771 11.4578 3.7894 13.1345 2.25195Z"
+                  fill="#6C6BBD"
+                />
               </svg>
             </div>
           </div>
 
-          {selectedPayment === 'credit' && (
+          {selectedPayment === "credit" && (
             <div className="space-y-4">
               <div>
-                <label className="block text-sm text-gray-600 mb-1">Card number</label>
+                <label className="block text-sm text-gray-600 mb-1">
+                  Card number
+                </label>
                 <input
                   type="text"
                   placeholder="1234 5678 9101 1456"
@@ -62,7 +130,9 @@ export default function PaymentDetailsPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">Expiration Date</label>
+                  <label className="block text-sm text-gray-600 mb-1">
+                    Expiration Date
+                  </label>
                   <input
                     type="text"
                     placeholder="MM/YY"
@@ -72,7 +142,9 @@ export default function PaymentDetailsPage() {
                 <div>
                   <label className="block text-sm text-gray-600 mb-1">
                     Card Security Code
-                    <span className="text-orange-500 ml-2 cursor-pointer">What is this?</span>
+                    <span className="text-orange-500 ml-2 cursor-pointer">
+                      What is this?
+                    </span>
                   </label>
                   <input
                     type="text"
@@ -84,35 +156,63 @@ export default function PaymentDetailsPage() {
             </div>
           )}
         </div>
-        <div className={`border rounded-lg p-6 ${selectedPayment === 'paypal' ? 'border-orange-500' : 'border-gray-200'}`}>
+        <div
+          className={`border rounded-lg p-6 ${
+            selectedPayment === "paypal"
+              ? "border-orange-500"
+              : "border-gray-200"
+          }`}
+        >
           <div className="flex items-center gap-3">
             <input
               type="radio"
               id="paypal"
               name="payment"
-              checked={selectedPayment === 'paypal'}
-              onChange={() => setSelectedPayment('paypal')}
+              checked={selectedPayment === "paypal"}
+              onChange={() => setSelectedPayment("paypal")}
               className="w-4 h-4 text-orange-500"
             />
-            <label htmlFor="paypal" className="font-medium text-[#333]">PayPal</label>
-            <img src="/paypal.png" alt="PayPal" className="h-6 ml-auto" />
+            <label htmlFor="paypal" className="font-medium text-[#333]">
+              PayPal
+            </label>
+
+            <Image
+              src="/paypal.png"
+              alt="Tour"
+              width={96}
+              height={96}
+              className="h-6 ml-auto"
+            />
           </div>
           <p className="text-sm text-gray-600 mt-2 ml-7">
-            You will be redirected to the PayPal website after submitting your order
+            You will be redirected to the PayPal website after submitting your
+            order
           </p>
         </div>
-        <div className={`border rounded-lg p-6 ${selectedPayment === 'upi' ? 'border-orange-500' : 'border-gray-200'}`}>
+        <div
+          className={`border rounded-lg p-6 ${
+            selectedPayment === "upi" ? "border-orange-500" : "border-gray-200"
+          }`}
+        >
           <div className="flex items-center gap-3">
             <input
               type="radio"
               id="upi"
               name="payment"
-              checked={selectedPayment === 'upi'}
-              onChange={() => setSelectedPayment('upi')}
+              checked={selectedPayment === "upi"}
+              onChange={() => setSelectedPayment("upi")}
               className="w-4 h-4 text-orange-500"
             />
-            <label htmlFor="upi" className="font-medium text-[#333]">UPI</label>
-            <img src="/upi.png" alt="UPI" className="h-6 ml-auto" />
+            <label htmlFor="upi" className="font-medium text-[#333]">
+              UPI
+            </label>
+            <Image
+              src="/upi.png"
+              alt="Tour"
+              width={96}
+              height={96}
+              className="h-6 ml-auto"
+            />
           </div>
           <p className="text-sm text-gray-600 mt-2 ml-7">
             You will be redirected to the website after submitting your order
@@ -121,28 +221,67 @@ export default function PaymentDetailsPage() {
       </div>
       <div>
         <div className="bg-white rounded-lg p-6 shadow-sm sticky top-6">
-          <h2 className="text-xl font-semibold mb-4 text-[#333]">Chardham Yatra package</h2>
+          <h2 className="text-xl font-semibold mb-4 text-[#333]">
+            Chardham Yatra package
+          </h2>
 
           <div className="flex items-start gap-4 mb-6">
-            <img src="/icons/KEDARNATH.png" alt="Tour" className="w-24 h-24 rounded-lg object-cover" />
+            <Image
+              src="/icons/KEDARNATH.png"
+              alt="Tour"
+              width={96}
+              height={96}
+              className="w-24 h-24 rounded-lg object-cover"
+            />
             <div>
-              <h3 className="font-medium text-[#333]">Wine tasting In Tuscany</h3>
+              <h3 className="font-medium text-[#333]">
+                Wine tasting In Tuscany
+              </h3>
               <div className="flex flex-col space-y-2 text-[#333] mt-4">
                 <div className="flex items-center space-x-2 text-gray-500 gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
-                    <path d="M2.61914 7.65727H19.381M4.71438 3.4668H17.2858C17.8415 3.4668 18.3744 3.68754 18.7674 4.08048C19.1603 4.47341 19.381 5.00634 19.381 5.56204V18.1335C19.381 18.6892 19.1603 19.2221 18.7674 19.615C18.3744 20.008 17.8415 20.2287 17.2858 20.2287H4.71438C4.15869 20.2287 3.62575 20.008 3.23282 19.615C2.83989 19.2221 2.61914 18.6892 2.61914 18.1335V5.56204C2.61914 5.00634 2.83989 4.47341 3.23282 4.08048C3.62575 3.68754 4.15869 3.4668 4.71438 3.4668V3.4668Z" stroke="#FA8B02" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M10.9998 12.895C11.5784 12.895 12.0474 12.426 12.0474 11.8474C12.0474 11.2688 11.5784 10.7998 10.9998 10.7998C10.4212 10.7998 9.95215 11.2688 9.95215 11.8474C9.95215 12.426 10.4212 12.895 10.9998 12.895Z" fill="#FA8B02" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="23"
+                    viewBox="0 0 22 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M2.61914 7.65727H19.381M4.71438 3.4668H17.2858C17.8415 3.4668 18.3744 3.68754 18.7674 4.08048C19.1603 4.47341 19.381 5.00634 19.381 5.56204V18.1335C19.381 18.6892 19.1603 19.2221 18.7674 19.615C18.3744 20.008 17.8415 20.2287 17.2858 20.2287H4.71438C4.15869 20.2287 3.62575 20.008 3.23282 19.615C2.83989 19.2221 2.61914 18.6892 2.61914 18.1335V5.56204C2.61914 5.00634 2.83989 4.47341 3.23282 4.08048C3.62575 3.68754 4.15869 3.4668 4.71438 3.4668V3.4668Z"
+                      stroke="#FA8B02"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M10.9998 12.895C11.5784 12.895 12.0474 12.426 12.0474 11.8474C12.0474 11.2688 11.5784 10.7998 10.9998 10.7998C10.4212 10.7998 9.95215 11.2688 9.95215 11.8474C9.95215 12.426 10.4212 12.895 10.9998 12.895Z"
+                      fill="#FA8B02"
+                    />
                   </svg>
                   <span>Fri, 23 DEC 2022</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-500 gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
-                    <path d="M10.9999 20.2287C6.37123 20.2287 2.61895 16.4764 2.61895 11.8477C2.61895 7.21908 6.37123 3.4668 10.9999 3.4668C15.6286 3.4668 19.3809 7.21908 19.3809 11.8477C19.3809 16.4764 15.6286 20.2287 10.9999 20.2287Z" stroke="#FA8B02" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M11.0003 8.70508V12.8956H14.667" stroke="#FA8B02" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="23"
+                    viewBox="0 0 22 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.9999 20.2287C6.37123 20.2287 2.61895 16.4764 2.61895 11.8477C2.61895 7.21908 6.37123 3.4668 10.9999 3.4668C15.6286 3.4668 19.3809 7.21908 19.3809 11.8477C19.3809 16.4764 15.6286 20.2287 10.9999 20.2287Z"
+                      stroke="#FA8B02"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M11.0003 8.70508V12.8956H14.667"
+                      stroke="#FA8B02"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
 
                   <span>15:00</span>
-
                 </div>
               </div>
             </div>
@@ -151,14 +290,14 @@ export default function PaymentDetailsPage() {
           <div className="border-t pt-4 mb-6">
             <div className="flex justify-between mb-2">
               <span className="text-[#333]">2 Adult (18+)</span>
-              <span className='text-[#333]'>₹18000</span>
+              <span className="text-[#333]">₹18000</span>
             </div>
             <div className="flex justify-between mb-4">
               <span className="text-[#333]">1 Child (6-17)</span>
-              <span className='text-[#333]'>₹2000</span>
+              <span className="text-[#333]">₹2000</span>
             </div>
             <div className="flex justify-between font-semibold">
-              <span className='text-[#333]'>Total Price</span>
+              <span className="text-[#333]">Total Price</span>
               <span className="text-orange-500">₹20000</span>
             </div>
           </div>
@@ -169,5 +308,5 @@ export default function PaymentDetailsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
