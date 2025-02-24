@@ -25,8 +25,8 @@ export default function Itinerary() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Itinerary</h2>
+    <div className="container mx-auto py-4 mt-5" id='itinerary'>
+      <h2 className="text-3xl font-medium mb-4">Itinerary</h2>
       <div className="border-t border-gray-300">
         {itinerary.map((item, index) => (
           <div key={index} className="border-b">
@@ -34,10 +34,11 @@ export default function Itinerary() {
               onClick={() => toggleAccordion(index)}
               className="w-full flex justify-between items-center py-4 text-left font-semibold text-gray-800"
             >
-              <span className="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                {item.day}
-              </span>
-              <span className="ml-3 flex-1">{item.title}</span>
+              <span className="bg-orange-500 bg-opacity-20 text-orange-500 px-3 py-1 rounded-full text-sm font-medium">
+  {item.day}
+</span>
+
+              <span className="ml-3 flex-1 text-[#5F5C5C] font-medium">{item.title}</span>
               <FaChevronDown
                 className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
               />
