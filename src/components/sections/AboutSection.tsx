@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-white pt-2 md:pt-60">
+    <section className="bg-white pt-2 md:pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Section Title */}

@@ -27,7 +27,7 @@ const BannerSection = () => {
                 priority
               />
               <div className="absolute inset-0 bg-black/40 flex flex-col justify-center sm:items-center text-white px-4 sm:px-0">
-                <div className="max-w-[90%] sm:max-w-2xl mx-auto text-left sm:text-center">
+                <div className="min-w-[90%] sm:max-w-2xl mx-auto text-center">
                   <h2 className="text-white font-poppins text-xl sm:text-4xl  leading-snug sm:leading-[120%]">
                     Ready to take the first step toward experiencing the thrill
                     of river rafting?
@@ -37,6 +37,9 @@ const BannerSection = () => {
                     Custom itineraries, automated reminders, and seamless
                     bookings make your rafting trip planning easier than ever.
                   </p>
+                  <div className="flex justify-center items-center mt-4">
+                  <button className="text-orange-500 bg-white px-4 rounded-full py-2 text-sm">Explore Available Deals!</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -53,7 +56,7 @@ const BannerSection = () => {
                 priority
               />
               <div className="absolute inset-0 bg-black/40 flex flex-col justify-center sm:items-center text-white px-4 sm:px-0">
-                <div className="max-w-[90%] sm:max-w-2xl mx-auto text-left sm:text-center">
+                <div className="min-w-[90%] sm:max-w-2xl mx-auto text-center">
                   <h2 className="text-white font-poppins text-xl sm:text-4xl  leading-snug sm:leading-[120%]">
                     Ready to take the first step toward experiencing the thrill
                     of river rafting?
@@ -63,6 +66,9 @@ const BannerSection = () => {
                     Custom itineraries, automated reminders, and seamless
                     bookings make your rafting trip planning easier than ever.
                   </p>
+                  <div className="flex justify-center items-center mt-4">
+                  <button className="text-orange-500 bg-white px-4 rounded-full py-2 text-sm">Explore Available Deals!</button>
+                  </div>
                 </div>
               </div>
             </div>

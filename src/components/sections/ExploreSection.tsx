@@ -98,7 +98,7 @@ export default function ExploreSection() {
             className={`md:px-10 md:py-3 md:text-md px-4 py-2 text-xs rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
               selectedCategory === category
                 ? "bg-orange-500 text-white shadow-lg hover:bg-orange-600"
-                : "bg-gray-200 text-gray-500 hover:bg-orange-50 border-2 border-gray-200"
+                : "bg-gray-200 text-gray-500 hover:bg-gray-100 hover:border-none border-2 border-gray-200"
             }`}
           >
             {category}
@@ -138,7 +138,7 @@ export default function ExploreSection() {
           filteredPlaces.map((place) => (
             <div
               key={place.id}
-              className="group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-600 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="relative h-[189px] md:h-[273px] overflow-hidden">
                 <Image
@@ -320,7 +320,7 @@ export default function ExploreSection() {
                     </span>
                   </div> */}
 
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-end justify-between w-full">
                   <div>
                     <p className="text-gray-600 font-poppins text-lg leading-[22.8px] my-2">
                       Starts From
@@ -340,7 +340,7 @@ export default function ExploreSection() {
                     </div>
 
                     {/* Default icon (hidden on hover) */}
-                    <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
+                    <div className="border hover:border-none rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
                       <FaArrowRightLong />
                     </div>
                     <Link
@@ -354,16 +354,18 @@ export default function ExploreSection() {
                     </Link>
                   </div>
                 </div>
+                <p className="text-gray-300 text-sm font-extralight">
+                  <del>₹18500</del>
+                </p>
               </div>
             </div>
           ))
         )}
       </div>
-      <div className="flex justify-end mt-12  max-w-7xl mx-auto px-4">
-      <button className="bg-white text-black border-[1px] border-orange-500 px-10 py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors text-lg md:text-[20px]">
-  Explore More
-</button>
-
+      <div className="flex justify-end mt-12  max-w-6xl mx-auto px-3">
+        <button className="bg-white text-black border-[1px] border-orange-500 px-10 py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors text-lg md:text-[20px]">
+          Explore More
+        </button>
       </div>
     </section>
   );

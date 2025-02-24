@@ -47,24 +47,25 @@ export default function StatsSection() {
 
         <div className="relative">
           <div className="absolute -top-[4rem] right-0 -left-[18rem] w-[312px] h-[305px] bg-[#FF7F00]/20 blur-[98px] z-10"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-5 md:px-0 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 md:px-0 relative z-10">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`text-start py-10 ${
-                  index < 3 ? "md:border-r-2 md:border-gray-500" : ""
+                className={`text-start py-6 ${
+                  index < 3 ? "md:border-r-2 md:border-gray-400" : ""
                 } 
                 ${
-                  index == 0 || index == 2 ? "border-r-2 border-gray-500" : ""
+                  index == 0 || index == 2 ? "border-r-2 border-gray-400" : ""
                 }`}
               >
-                <div className="text-2xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-500 text-center font-poppins">
+                <div className="max-w-[90%] mx-auto">
+                <div className="text-xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-400 text-center font-poppins">
                   <h3>{stat.label}</h3>
-                  <div className="p-2 rounded-full border border-gray-500">
+                  <div className="p-2 rounded-full border border-gray-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="16"
+                      height="16"
                       viewBox="0 0 15 20"
                       fill="none"
                     >
@@ -75,9 +76,10 @@ export default function StatsSection() {
                     </svg>
                   </div>
                 </div>
-                <p className="mt-2 text-base md:text-lg font-normal leading-snug text-gray-500">
+                <p className="mt-2 text-xs md:text-lg font-normal leading-snug text-gray-400">
                   {stat.description}
                 </p>
+                </div>
               </div>
             ))}
           </div>
