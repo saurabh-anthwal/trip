@@ -178,42 +178,49 @@ export default function ChardhamPackage() {
 
           <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-4 border-b leading-[16.8px] font-normal">
             {basicInfo.map((el) => (
-              <p
+              <div
                 key={el.id}
-                className={`${
+                className={`flex items-center gap-3 ${
                   el.id === 0 || el.id === 1 ? "border-r pr-2" : ""
                 }`}
               >
-                <div className="flex gap-3">
-                  <Image src={el.icon} alt="icon" width={24} height={24} />
-
-                  {el.details}
-                </div>
-              </p>
-            ))}
-          </div>
-          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto pb-2">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-center gap-4 w-full">
-                <div className="bg-gray-100 p-2 sm:p-3 rounded-full">
-                  <Image
-                    src={service.imgSrc}
-                    alt={service.name}
-                    width={30}
-                    height={30}
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-[20px] text-[#727272] font-medium leading-[120%]">
-                    {service.name}
-                  </h3>
-                  <p className="text-sm sm:text-sm text-[#808080] leading-[120%] hidden sm:block">
-                    {service.location}
-                  </p>
-                </div>
+                <Image
+                  src={el.icon}
+                  alt="icon"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                <span>{el.details}</span>
               </div>
             ))}
+          </div>
+
+          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto pb-2">
+            {services.map((service, index) => {
+              return (
+                <div key={index} className="flex items-center gap-4 w-full">
+                  <div className="bg-white md:bg-gray-100 p-2 sm:p-3 rounded-full">
+                    <div className="relative w-[40px] h-[40px]">
+                      <Image
+                        src={service.imgSrc}
+                        alt={service.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-[20px] text-[#727272] font-medium leading-[120%]">
+                      {service.name}
+                    </h3>
+                    <p className="text-sm sm:text-sm text-[#808080] leading-[120%] hidden sm:block">
+                      {service.location}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <h2
