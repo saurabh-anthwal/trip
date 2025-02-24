@@ -147,7 +147,7 @@ export default function ChardhamPackage() {
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
         <div className="col-span-2 w-full sm:w-[65%] ">
           <div className="flex items-center gap-3 order-2 md:order-1">
-            <h1 className="text-gray-800 text-3xl font-medium leading-[normal]">
+            <h1 className="text-gray-800 text-lg md:text-3xl font-medium leading-[normal]">
               Chardham Yatra Package
             </h1>
             <div className="flex items-center gap-2">
@@ -176,7 +176,7 @@ export default function ChardhamPackage() {
             </div>
           </div>
 
-          <div className="flex gap-2 mt-2 text-gray-500 text-sm border-b leading-[16.8px] font-normal">
+          <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-4 border-b leading-[16.8px] font-normal">
             {basicInfo.map((el) => (
               <p
                 key={el.id}
@@ -192,7 +192,7 @@ export default function ChardhamPackage() {
               </p>
             ))}
           </div>
-          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto">
+          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto pb-2">
             {services.map((service, index) => (
               <div key={index} className="flex items-center gap-4 w-full">
                 <div className="bg-gray-100 p-2 sm:p-3 rounded-full">
@@ -243,14 +243,15 @@ export default function ChardhamPackage() {
               {dhams.map((dham, index) => (
                 <div
                   key={index}
-                  className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-x-4"
+                  className="flex flex-col items-start sm:flex-row md:items-center sm:items-start justify-center sm:justify-start space-x-4"
                 >
-                  <img
+                  <Image
                     src={dham.image}
                     alt={dham.title}
+                    width={357}
+                    height={141}
                     className="w-[357px] h-[141px] sm:w-20 sm:h-20 rounded-lg object-cover"
                   />
-
                   <div>
                     <h3 className="text-[#535353] text-lg font-medium font-[Poppins]">
                       {dham.title}
@@ -308,8 +309,8 @@ export default function ChardhamPackage() {
                       key={index}
                       className="flex items-start gap-3 text-black text-lg leading-[22.8px] font-poppins"
                     >
-                      <FaCheckCircle className="text-green-500 w-6 h-6" />
-                      {item}
+                      <FaCheckCircle className="text-green-500 w-6 h-6 flex-shrink-0" />
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
