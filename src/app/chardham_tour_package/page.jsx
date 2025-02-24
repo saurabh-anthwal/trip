@@ -145,6 +145,7 @@ export default function ChardhamPackage() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
+
         <div className="col-span-2 w-full sm:w-[65%] ">
           <div className="flex items-center gap-3 order-2 md:order-1">
             <h1 className="text-gray-800 text-lg md:text-3xl font-medium leading-[normal]">
@@ -366,7 +367,7 @@ export default function ChardhamPackage() {
           </div>
         </div>
 
-        <div className="relative ">
+        <div className="relative order-2 md:order-1">
           <div className="sticky top-40">
             <div className="border rounded-lg shadow-lg p-4 my-3">
               <div className="flex justify-between items-center gap-3 order-1 md:order-2">
