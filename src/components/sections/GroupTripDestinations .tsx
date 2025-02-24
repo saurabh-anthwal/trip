@@ -82,219 +82,228 @@ export default function GroupTripDestinations() {
       </div>
 
       <div
-        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-4 bg-white"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
         }}
       >
-        {packages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="bg-white rounded-2xl min-w-[85%] md:min-w-[25%] shadow-lg overflow-hidden  border"
-          >
-            <Image
-              src={pkg.image}
-              alt={pkg.title}
-              width={385}
-              height={273}
-              className="rounded-xl object-cover w-full h-[189px] md:h-[273px]"
-            />
+        {packages.map((place) => (
+            <div
+              key={place.id}
+              className="group min-w-[85%] md:min-w-[25%] md:max-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div className="relative h-[189px] md:h-[273px] overflow-hidden">
+                <Image
+                  src="/home-img/kedarnath.png"
+                  alt={place.title}
+                  fill
+                  className="object-cover rounded-3xl transform group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-2xl text-gray-900 group-hover:text-orange-500 transition-colors">
+                    {place.title}
+                  </h3>
+                </div>
+                <div className="flex md:gap-4 gap-2 items-center text-sm mb-4">
+                  <div className="flex items-center text-orange-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="19"
+                      viewBox="0 0 18 19"
+                      fill="none"
+                      className="w-4 h-4 mr-2"
+                    >
+                      <g clipPath="url(#clip0_361_1189)">
+                        <path
+                          d="M14.7863 6.63264C14.7863 10.4898 9.00056 14.9898 9.00056 14.9898C9.00056 14.9898 3.21484 10.4898 3.21484 6.63264C3.21484 3.48135 5.84927 0.846924 9.00056 0.846924C12.1518 0.846924 14.7863 3.48135 14.7863 6.63264Z"
+                          stroke="#FF7F00"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M8.99888 8.56124C10.064 8.56124 10.9275 7.6978 10.9275 6.63267C10.9275 5.56755 10.064 4.7041 8.99888 4.7041C7.93376 4.7041 7.07031 5.56755 7.07031 6.63267C7.07031 7.6978 7.93376 8.56124 8.99888 8.56124Z"
+                          stroke="#FF7F00"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M14.242 13.0613H15.4283L17.3569 17.5613H0.642578L2.57115 13.0613H3.75748"
+                          stroke="#FF7F00"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_361_1189">
+                          <rect
+                            width="18"
+                            height="18"
+                            fill="white"
+                            transform="translate(0 0.204102)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span className="text-gray-400">{place.location}</span>
+                  </div>
 
-            <div className="p-4">
-              <h3 className="font-semibold text-lg text-gray-900">
-                {pkg.title}
-              </h3>
-              <div className="flex items-center gap-2 my-2 text-sm text-gray-600 mt-2">
-                <span className="w-4 h-4">
+                 <div className="flex items-center text-orange-500">
+                 <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      className="w-4 h-4 mr-2"
+                    >
+                      <circle cx="6.5" cy="5.7041" r="2.5" fill="#FF7F00" />
+                      <ellipse
+                        cx="9.83285"
+                        cy="2.09357"
+                        rx="0.397962"
+                        ry="0.825304"
+                        transform="rotate(39.6291 9.83285 2.09357)"
+                        fill="#FF7F00"
+                      />
+                      <ellipse
+                        cx="6.41162"
+                        cy="1.03587"
+                        rx="0.397962"
+                        ry="0.825304"
+                        transform="rotate(0.946317 6.41162 1.03587)"
+                        fill="#FF7F00"
+                      />
+                      <ellipse
+                        cx="3.0796"
+                        cy="2.34857"
+                        rx="0.397962"
+                        ry="0.825304"
+                        transform="rotate(-37.7364 3.0796 2.34857)"
+                        fill="#FF7F00"
+                      />
+                      <ellipse
+                        cx="1.299"
+                        cy="5.45589"
+                        rx="0.397962"
+                        ry="0.825304"
+                        transform="rotate(-76.4192 1.299 5.45589)"
+                        fill="#FF7F00"
+                      />
+                      <ellipse
+                        cx="2.91642"
+                        cy="8.9145"
+                        rx="0.397962"
+                        ry="0.825304"
+                        transform="rotate(-115.102 2.91642 8.9145)"
+                        fill="#FF7F00"
+                      />
+                      <rect
+                        x="2"
+                        y="15.1909"
+                        width="20"
+                        height="1"
+                        rx="0.5"
+                        transform="rotate(-44.3744 2 15.1909)"
+                        fill="#FF7F00"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M16.9689 13.1731C16.8155 13.1936 16.659 13.2042 16.5 13.2042C14.567 13.2042 13 11.6372 13 9.70422C13 9.54523 13.0106 9.38872 13.0311 9.23535C11.3198 9.46446 10 10.9302 10 12.7042C10 14.6372 11.567 16.2042 13.5 16.2042C15.274 16.2042 16.7398 14.8844 16.9689 13.1731Z"
+                        fill="#FF7F00"
+                      />
+                      <path
+                        d="M16.5 9.2041L16.6123 9.54959H16.9755L16.6816 9.76312L16.7939 10.1086L16.5 9.89508L16.2061 10.1086L16.3184 9.76312L16.0245 9.54959H16.3877L16.5 9.2041Z"
+                        fill="#FF7F00"
+                      />
+                      <path
+                        d="M15.5 7.2041L15.6123 7.54959H15.9755L15.6816 7.76312L15.7939 8.10861L15.5 7.89508L15.2061 8.10861L15.3184 7.76312L15.0245 7.54959H15.3877L15.5 7.2041Z"
+                        fill="#FF7F00"
+                      />
+                    </svg>
+                    <span className="text-gray-400">11N/12D</span>
+                 </div>
+
+                <div className="flex items-center text-orange-500">
+                  {/* SVG Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
+                    width="15"
+                    height="14"
+                    viewBox="0 0 15 14"
                     fill="none"
                   >
-                    <g clipPath="url(#clip0_361_1607)">
-                      <path
-                        d="M14.7863 6.42829C14.7863 10.2854 9.00056 14.7854 9.00056 14.7854C9.00056 14.7854 3.21484 10.2854 3.21484 6.42829C3.21484 3.27701 5.84927 0.642578 9.00056 0.642578C12.1518 0.642578 14.7863 3.27701 14.7863 6.42829Z"
-                        stroke="#FF7F00"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M8.99888 8.35714C10.064 8.35714 10.9275 7.4937 10.9275 6.42857C10.9275 5.36345 10.064 4.5 8.99888 4.5C7.93376 4.5 7.07031 5.36345 7.07031 6.42857C7.07031 7.4937 7.93376 8.35714 8.99888 8.35714Z"
-                        stroke="#FF7F00"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M14.242 12.8569H15.4283L17.3569 17.3569H0.642578L2.57115 12.8569H3.75748"
-                        stroke="#FF7F00"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_361_1607">
-                        <rect width="18" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
-                  {pkg.location}
-                </span>
-
-                <span className="w-4 h-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <circle cx="6.5" cy="5.5" r="2.5" fill="#FF7F00" />
-                    <ellipse
-                      cx="9.83285"
-                      cy="1.88947"
-                      rx="0.397962"
-                      ry="0.825304"
-                      transform="rotate(39.6291 9.83285 1.88947)"
-                      fill="#FF7F00"
-                    />
-                    <ellipse
-                      cx="6.41162"
-                      cy="0.831764"
-                      rx="0.397962"
-                      ry="0.825304"
-                      transform="rotate(0.946317 6.41162 0.831764)"
-                      fill="#FF7F00"
-                    />
-                    <ellipse
-                      cx="3.0796"
-                      cy="2.14447"
-                      rx="0.397962"
-                      ry="0.825304"
-                      transform="rotate(-37.7364 3.0796 2.14447)"
-                      fill="#FF7F00"
-                    />
-                    <ellipse
-                      cx="1.299"
-                      cy="5.25178"
-                      rx="0.397962"
-                      ry="0.825304"
-                      transform="rotate(-76.4192 1.299 5.25178)"
-                      fill="#FF7F00"
-                    />
-                    <ellipse
-                      cx="2.91642"
-                      cy="8.7104"
-                      rx="0.397962"
-                      ry="0.825304"
-                      transform="rotate(-115.102 2.91642 8.7104)"
-                      fill="#FF7F00"
-                    />
-                    <rect
-                      x="2"
-                      y="14.9868"
-                      width="20"
-                      height="1"
-                      rx="0.5"
-                      transform="rotate(-44.3744 2 14.9868)"
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M3.8 3.8291C3.8 5.69306 5.28865 7.2041 7.125 7.2041C8.96135 7.2041 10.45 5.69306 10.45 3.8291C10.45 1.96514 8.96135 0.454102 7.125 0.454102C5.28865 0.454102 3.8 1.96514 3.8 3.8291ZM4.94 3.8291C4.94 5.05399 5.91826 6.04696 7.125 6.04696C8.33174 6.04696 9.31 5.05399 9.31 3.8291C9.31 2.60421 8.33174 1.61124 7.125 1.61124C5.91826 1.61124 4.94 2.60421 4.94 3.8291Z"
                       fill="#FF7F00"
                     />
                     <path
                       fillRule="evenodd"
                       clipRule="evenodd"
-                      d="M16.9689 12.969C16.8155 12.9895 16.659 13.0001 16.5 13.0001C14.567 13.0001 13 11.4331 13 9.50012C13 9.34113 13.0106 9.18462 13.0311 9.03125C11.3198 9.26036 10 10.7261 10 12.5001C10 14.4331 11.567 16.0001 13.5 16.0001C15.274 16.0001 16.7398 14.6803 16.9689 12.969Z"
-                      fill="#FF7F00"
-                    />
-                    <path
-                      d="M16.5 9L16.6123 9.34549H16.9755L16.6816 9.55902L16.7939 9.90451L16.5 9.69098L16.2061 9.90451L16.3184 9.55902L16.0245 9.34549H16.3877L16.5 9Z"
-                      fill="#FF7F00"
-                    />
-                    <path
-                      d="M15.5 7L15.6123 7.34549H15.9755L15.6816 7.55902L15.7939 7.90451L15.5 7.69098L15.2061 7.90451L15.3184 7.55902L15.0245 7.34549H15.3877L15.5 7Z"
+                      d="M3.8 9.13267C1.76503 9.13267 0.103662 10.7563 0.00466633 12.797C0.00156689 12.8608 -9.53674e-7 12.9251 -9.53674e-7 12.9898V13.9541H14.25V12.9898C14.25 12.9251 14.2484 12.8608 14.2453 12.797C14.1463 10.7563 12.485 9.13267 10.45 9.13267H3.8ZM13.1033 12.797C13.0059 11.3958 11.8552 10.2898 10.45 10.2898H3.8C2.39481 10.2898 1.2441 11.3958 1.14668 12.797H13.1033Z"
                       fill="#FF7F00"
                     />
                   </svg>
-                </span>
-                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
-                  {pkg.duration}
-                </span>
-              </div>
 
-              <div className="flex items-center gap-2 text-sm text-gray-600 mt-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="15"
-                  height="14"
-                  viewBox="0 0 15 14"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M3.8 3.625C3.8 5.48896 5.28865 7 7.125 7C8.96135 7 10.45 5.48896 10.45 3.625C10.45 1.76104 8.96135 0.25 7.125 0.25C5.28865 0.25 3.8 1.76104 3.8 3.625ZM4.94 3.625C4.94 4.84989 5.91826 5.84286 7.125 5.84286C8.33174 5.84286 9.31 4.84989 9.31 3.625C9.31 2.40011 8.33174 1.40714 7.125 1.40714C5.91826 1.40714 4.94 2.40011 4.94 3.625Z"
-                    fill="#FF7F00"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M3.8 8.92857C1.76503 8.92857 0.103662 10.5522 0.00466633 12.5929C0.00156689 12.6567 -9.53674e-07 12.721 -9.53674e-07 12.7857V13.75H14.25V12.7857C14.25 12.721 14.2484 12.6567 14.2453 12.5929C14.1463 10.5522 12.485 8.92857 10.45 8.92857H3.8ZM13.1033 12.5929C13.0059 11.1917 11.8552 10.0857 10.45 10.0857H3.8C2.39481 10.0857 1.2441 11.1917 1.14668 12.5929H13.1033Z"
-                    fill="#FF7F00"
-                  />
-                </svg>
-                <span className="text-sm md:text-base font-normal leading-snug text-gray-500 font-poppins">
-                  {pkg.group}
-                </span>
-              </div>
-
-              <div className="flex justify-between items-center mt-4">
-                <div>
-                  <p className="text-base md:text-lg text-[rgba(12,17,31,0.60)] font-poppins font-normal leading-snug mt-4 my-2">
-                    Starts From
-                  </p>
-
-                  <p className="text-[19px] font-semibold leading-[22.8px] text-[#050505] font-poppins">
-                    ₹{pkg.price}
-                    <span className="text-[19px] font-normal text-[#808080]">
-                      /Person
-                    </span>
-                  </p>
-                </div>
-                <div className="hidden md:flex w-[39px] h-[70px] flex-shrink-0 rounded-[15px] bg-[#D9D9D9] text-center items-center justify-center flex-col">
-                  <p className="text-[19px] font-normal leading-[22.8px] text-black font-poppins">
-                    {pkg.date.split(" ")[0]}
-                  </p>
-                  <p className="text-[14px] font-normal leading-[16.8px] text-black font-poppins">
-                    {pkg.date.split(" ")[1]}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center justify-end mt-2 space-x-1 text-orange-500">
-                {/* Show only on hover */}
-                <div className="border border-black rounded-full p-1 block group-hover:hidden">
-                  <p className="h-2 w-2 rounded-full bg-[#FF7F00]"></p>
-                </div>
-
-                {/* Default icon (hidden on hover) */}
-                <div className="border rounded-full p-2 bg-orange-500 text-gray-800 hidden group-hover:block">
-                  <FaArrowRightLong />
-                </div>
-                <Link
-                  href="#"
-                  className="text-[19px] font-normal leading-[22.8px] text-[#FF7F00] font-poppins"
-                >
-                  Requ
-                  <span className="border-b border-orange-500 transition-all duration-700 hover:border-transparent">
-                    est a call
+                  <span className=" text-gray-400">
+                    Group of 1
                   </span>
-                </Link>
+                </div>
+                </div>
+
+                {/* <p className="text-gray-600 mb-4 mt-2 line-clamp-2 text-sm">
+                    {place.description}
+                  </p> */}
+                {/* <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <FaClock className="w-4 h-4 mr-2 text-orange-500" />
+                      <span>{place.bestTime}</span>
+                    </div>
+                    <span className="text-orange-500 font-bold text-lg">
+                      {place.price === 0 ? "Free" : `₹${place.price}`}
+                    </span>
+                  </div> */}
+
+                <div className="flex text-gray-400 items-end justify-between w-full">
+                  <div>
+                    <p className="font-poppins text-lg leading-[22.8px] my-2">
+                      Starts From
+                    </p>
+                    <p className="text-sm font-extralight">
+                      <del>₹18500</del>
+                    </p>
+                    <p className="text-black font-poppins text-lg font-semibold leading-[22.8px]">
+                      ₹12500
+                      <span className="font-poppins text-gray-400 text-lg font-normal leading-[22.8px]">
+                        /Person
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="">
+                    <div className="text-right mb-2">
+                    <Link href="#" className="text-sm border rounded-md px-4 md:text-lg font-normal leading-[22.8px] text-gray-500 font-poppins">
+                      {place?.date}
+                    </Link>
+                    </div>
+                    <div className="text-sm md:text-lg rounded-lg border px-8 py-1 font-normal leading-[22.8px] text-orange-500 font-poppins">
+                    <Link href="#">
+                      Book Now
+                    </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
       <div className="flex justify-end mt-12 max-w-7xl mx-auto px-4">
         <button  className="bg-white text-black border-[1px] border-orange-500 px-10 py-3 rounded-full hover:bg-orange-600 hover:text-white transition-colors text-lg md:text-[20px]">

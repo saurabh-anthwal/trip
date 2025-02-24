@@ -93,14 +93,14 @@ export const destinations: Destination[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah Johnson',
+    name: 'Subhash Agarwal',
     image: '/home-img/testimonal.png',
     comment: 'It was an nice experience to Char Dham Yatra with Triplanza and our cab driver Mr Nitin is also a very sincere person who guided us all these four holy places. Thanks Mr Suraj Bhatt and Nitin',
     rating: 5
   },
   {
     id: 2,
-    name: 'Mike Chen',
+    name: 'Subhash Agarwal',
     image: '/home-img/testimonal.png',
     comment: 'Best travel experience ever! Will definitely book again with Triplanza.',
     rating: 5
@@ -230,10 +230,10 @@ export const explorePlaces: ExplorePlace[] = [
 ];
 
 export const stats = [
-  { label: '10 k+', description: 'Happy Customers' },
-  { label: '200 k+', description: 'Reviews & Ratings' },
-  { label: '10 k+', description: 'Worldwide Tours' },
-  { label: '10 k+', description: 'Years Experience' },
+  { label: '10 k+', description: 'listed place' },
+  { label: '200 k+', description: 'Happy Customers' },
+  { label: '10 k+', description: 'listed place' },
+  { label: '10 k+', description: 'google Rating' },
 ];
 
 export const services = [

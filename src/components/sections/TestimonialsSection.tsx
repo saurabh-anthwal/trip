@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
           <div className="relative flex flex-wrap items-center justify-center w-full">
             <button
               onClick={handlePrev}
-              className="absolute left-2 sm:left-[-50px] bg-gray-300 p-3 text-gray-800 rounded-full shadow-md"
+              className="absolute left-0 sm:left-[-50px] bg-gray-300 p-3 text-gray-800 rounded-full shadow-md"
             >
               <FaArrowLeft />
             </button>
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
                   {[...Array(5)].map((_, i) => (
                     <StarIcon
                       key={i}
-                      className={`h-5 w-5 ${
+                      className={`h-8 w-8 ${
                         i < testimonials[currentIndex].rating
                           ? "text-yellow-400"
                           : "text-gray-400"
@@ -94,9 +94,9 @@ export default function TestimonialsSection() {
             </div>
             <button
               onClick={handleNext}
-              className="absolute right-2 sm:right-[-50px] text-gray-800 bg-gray-300 p-3 rounded-full shadow-md"
+              className="absolute right-0 sm:right-[-50px] text-gray-800 bg-gray-300 p-3 rounded-full shadow-md"
             >
-              <FaArrowRight />
+              <FaArrowRight/>
             </button>
           </div>
         </div>
