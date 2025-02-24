@@ -367,7 +367,7 @@ export default function ChardhamPackage() {
         </div>
 
         <div className="relative ">
-          <div className="sticky top-5">
+          <div className="sticky top-40">
             <div className="border rounded-lg shadow-lg p-4 my-3">
               <div className="flex justify-between items-center gap-3 order-1 md:order-2">
                 <div className="flex items-center space-x-2">
@@ -490,8 +490,6 @@ export default function ChardhamPackage() {
                         </svg>
                       </div>
                     </button>
-
-                    {/* Accordion Content */}
                     {accordion === index && (
                       <div className="p-2 text-gray-600 text-sm">
                         Additional details about availability.
