@@ -37,15 +37,16 @@ const AboutPage = () => {
             About Us.{" "}
           </h2>
 
-          <p className="text-sm md:text-lg  text-white text-center max-w-4xl mt-1">
+          <p className="text-sm md:text-lg text-white text-center max-w-4xl mt-1">
             At Triplanza Private Limited, we are more than just a travel
             company; we are your gateway to unforgettable adventures, spiritual
             journeys, and thrilling experiences. Founded by Suraj Bhatt,
             Triplanza has emerged as one of the leading travel companies,
             dedicated to crafting seamless and enriching travel experiences for
-            our customers. Whether you're seeking the serenity of holy places,
-            the adrenaline rush of adventure sports, or the joy of exploring new
-            destinations, we are here to make your dreams come true.{" "}
+            our customers. Whether you&apos;re seeking the serenity of holy
+            places, the adrenaline rush of adventure sports, or the joy of
+            exploring new destinations, we are here to make your dreams come
+            true.
           </p>
         </div>
       </div>
@@ -63,7 +64,7 @@ const AboutPage = () => {
             memories. From spiritual pilgrimages like the Chardham Yatra in
             Uttarakhand to adrenaline-pumping activities like paragliding,
             bungee jumping, and river rafting, we offer a diverse range of
-            travel options to cater to every traveler's needs.
+            travel options to cater to every traveler&apos;s needs.
           </p>
         </div>
         <div className="relative h-[500px]">
@@ -84,7 +85,7 @@ const AboutPage = () => {
           We are a team of passionate travelers, adventure enthusiasts, and
           travel experts who believe that every journey should <br /> be
           extraordinary. At Triplanza, we understand that travel is not just
-          about visiting new places; it's about creating <br /> memories,
+          about visiting new places; it&apos;s about creating <br /> memories,
           discovering yourself, and experiencing the world in its purest form.
         </p>
         <p className="text-gray-600 text-center max-w-7xl mx-auto mt-3">
