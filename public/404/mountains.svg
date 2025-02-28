@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Mountains -->
+    <path d="M20 250 L150 50 L280 250 Z" fill="#2D3748"/>
+    <path d="M150 250 L280 80 L410 250 Z" fill="#1A202C"/>
+    <path d="M280 250 L410 100 L480 250 Z" fill="#2D3748"/>
+    
+    <!-- Trees -->
+    <path d="M50 250 L70 220 L90 250 Z" fill="#234E52"/>
+    <path d="M100 250 L120 210 L140 250 Z" fill="#234E52"/>
+    <path d="M360 250 L380 220 L400 250 Z" fill="#234E52"/>
+    
+    <!-- Tent -->
+    <g transform="translate(220,180)">
+        <path d="M0 50 L25 0 L50 50 Z" fill="#FF6B00"/>
+        <path d="M20 50 L25 30 L30 50 Z" fill="#FFE4CC"/>
+        <circle cx="25" cy="35" r="2" fill="#FFD700"/>
+    </g>
+    
+    <!-- Ground -->
+    <path d="M0 250 L500 250" stroke="#E2E8F0" stroke-width="2"/>
+    <path d="M0 250 L500 250" stroke-dasharray="4 4" stroke="#CBD5E0" stroke-width="1"/>
+</svg>
