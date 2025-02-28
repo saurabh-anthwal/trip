@@ -45,7 +45,7 @@ const SubBlogPage = () => {
                 <br />
                 A Historic Adventure in Uttarakhand
             </h1>
-            <div className="relative w-full h-[565px] mb-8">
+            <div className="relative w-full h-[333px] md:h-[565px] mb-8">
                 <Image
                     src="/blog/sub_blog.png"
                     alt="Gartang Gali Bridge"
