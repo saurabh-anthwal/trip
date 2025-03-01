@@ -37,7 +37,7 @@ export default function ExploreSection() {
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   };
 
-  const handleDetails = (data:any)=>{
+  const handleDetails = ()=>{
     router.push('/detailsPage/1')
   }
 
@@ -144,7 +144,7 @@ export default function ExploreSection() {
             <div
               key={place.id}
               className="cursor-pointer group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
-              onClick={()=>handleDetails(place)}
+              onClick={()=>handleDetails()}
             >
               <div className="relative h-[189px] md:h-[273px] overflow-hidden">
                 <Image

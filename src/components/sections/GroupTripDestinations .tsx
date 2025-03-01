@@ -71,7 +71,8 @@ const packages = [
 export default function GroupTripDestinations() {
   const router = useRouter()
 
-  const handleDetailsPage = (data: any) => {
+  const handleDetailsPage = (data:object) => {
+    console.log(data)
     router.push("detailsPage/1")
   }
   return (

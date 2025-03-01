@@ -9,7 +9,7 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function ChardhamPackage() {
   const tabs = [
@@ -126,14 +126,14 @@ export default function ChardhamPackage() {
     "Refund Policies",
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
-  const [accordion, setAccordion] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [accordion, setAccordion] = useState<number | null>(null);
 
-  const toggleAccordion = (index:any) => {
+  const toggleAccordion = (index:number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const toggleAccordionAvailable = (index:any) => {
+  const toggleAccordionAvailable = (index:number) => {
     setAccordion(openIndex === index ? null : index);
   };
 
@@ -236,12 +236,12 @@ export default function ChardhamPackage() {
           </h2>
 
           <p className="text-gray-500 text-sm font-normal leading-[normal] mt-2">
-            The Char Dham (lit. 'the small four abodes/seats' or 'the small
+            {`The Char Dham (lit. 'the small four abodes/seats' or 'the small
             circuit of four abodes/seats') is an important modern Hindu
             pilgrimage circuit in Uttarakhand, in the Indian Himalayas. Located
             in the Garhwal region of the state of Uttarakhand, the circuit
             consists of four sites—Gangotri, Yamunotri, Kedarnath, and
-            Badrinath.
+            Badrinath.`}
           </p>
 
           <div className="mx-auto pr-0 sm:pr-6 pt-6">
@@ -343,7 +343,7 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="max-w-4xl  mt-5">
-              {items.map((item, index) => (
+              {items.map((item, index:number) => (
                 <div key={index} className="border-b">
                   <button
                     onClick={() => toggleAccordion(index)}
