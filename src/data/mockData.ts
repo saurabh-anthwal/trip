@@ -166,20 +166,24 @@ export const monthlyPlaces: Place[] = [
   }
 ];
 
+// Explore best travel places
 export const explorePlaces: ExplorePlace[] = [
   {
     id: 1,
-    title: 'Lakes',
-    location: 'Rajasthan',
+    title: 'CHAR DHAM YATRA',
+    location: 'Uttarakhand',
     image: '/explorePlaces/lakes.jpg',
-    description: 'Explore the beautiful lakes of Rajasthan, India.',
+    description: 'Embark on a divine journey with our Dodham Yatra by Helicopter in 3 Nights & 4 Days. This spiritually enriching tour covers the two major Dham destinations — Kedarnath and Badrinath, with Dehradun as both the starting and ending point of your pilgrimage.',
+    // Inclusions:[],
+    // Itinerary:[],
+    // Terms:"",
     bestTime:'March to May',
     price: 100,
-    category: 'Lakes'
+    category: 'temple'
   },
   {
     id: 2,
-    title: 'Wildlife',
+    title: 'DO DHAM YATRA',
     location: 'Assam',
     image: '/explorePlaces/wildlife.jpg',
     description: 'Explore the wildlife of Assam, India.',
@@ -189,7 +193,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     id: 3,
-    title: 'Temples',
+    title: 'CHAR DHAM YATRA BY HELICOPTER',
     location: 'Tamil Nadu',
     image: '/explorePlaces/temples.jpg',
     description: 'Explore the beautiful temples of Tamil Nadu, India.',
@@ -199,7 +203,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     id: 4,
-    title: 'Shopping',
+    title: 'DO DHAM YATRA BY HELICOPTER',
     location: 'Delhi',
     image: '/explorePlaces/shopping.jpg',
     description: 'Explore the shopping experience in Delhi, India.',
@@ -209,26 +213,17 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     id: 5,
-    title: 'Viewpoints',
+    title: 'KEDARNATH YATRA',
     location: 'Himachal Pradesh',
     image: '/explorePlaces/viewpoints.jpg',
     description: 'Explore the beautiful viewpoints of Himachal Pradesh, India.',
     bestTime:'March to May',
     price: 100,
     category: 'Viewpoints'
-  },
-  {
-    id: 6,
-    title: 'Adventure',
-    location: 'Uttarakhand',
-    image: '/explorePlaces/adventure.jpg',
-    description: 'Explore the adventure activities in Uttarakhand, India.',
-    bestTime:'March to May',
-    price: 100,
-    category: 'Adventure'
   }
 ];
 
+// STATS
 export const stats = [
   { label: '10 k+', description: 'listed place' },
   { label: '200 k+', description: 'Happy Customers' },

@@ -138,7 +138,7 @@ export default function ChardhamPackage() {
   };
 
   return (
-    <div className="container mx-auto p-4 text-gray-600">
+    <div className="container mx-auto py-20 text-gray-600">
       <ImageSections />
       <div className="flex mt-4 gap-3 sm:gap-6 text-base sm:text-lg font-medium leading-6 overflow-x-auto">
         <TabSwitch tabs={tabs} />
@@ -146,8 +146,8 @@ export default function ChardhamPackage() {
 
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
 
-        <div className="col-span-2 w-full sm:w-[65%] ">
-          <div className="flex items-center gap-3 order-2 md:order-1">
+        <div className="col-span-2 w-full sm:w-[65%]">
+          <div className="flex items-center gap-3 order-2 md:order-1 mb-4">
             <h1 className="text-gray-800 text-lg md:text-3xl font-medium leading-[normal]">
               Chardham Yatra Package
             </h1>
@@ -177,12 +177,12 @@ export default function ChardhamPackage() {
             </div>
           </div>
 
-          <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-4 border-b leading-[16.8px] font-normal">
-            {basicInfo.map((el) => (
+          <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-2 border-b leading-[16.8px] font-normal">
+            {basicInfo.map((el,i) => (
               <div
                 key={el.id}
-                className={`flex items-center gap-3 ${
-                  el.id === 0 || el.id === 1 ? "border-r pr-2" : ""
+                className={`flex items-center md:gap-4 gap-2 pb-1 ${
+                  i === 0 || i === 1 ? "border-r-2 md:pr-2 pr-1" : ""
                 }`}
               >
                 <Image
@@ -190,32 +190,33 @@ export default function ChardhamPackage() {
                   alt="icon"
                   width={24}
                   height={24}
-                  className="w-6 h-6"
+                  className="w-4 h-4"
                 />
-                <span>{el.details}</span>
+                <span className="text-xs">{el.details}</span>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-row sm:grid sm:grid-cols-2 gap-8 mt-6 overflow-x-auto pb-2">
+          <div className="flex w-full md:grid md:grid-cols-3 gap-8 mt-6 overflow-x-auto pb-4">
             {services.map((service, index) => {
               return (
-                <div key={index} className="flex items-center gap-4 w-full">
-                  <div className="bg-white md:bg-gray-100 p-2 sm:p-3 rounded-full">
-                    <div className="relative w-[40px] h-[40px]">
+                <div key={index} className="md:flex items-center gap-4 w-full">
+                  <div className="md:bg-gray-100 md:p-2 md:rounded-full">
+                    <div className="relative w-xl h-xl">
                       <Image
                         src={service.imgSrc}
                         alt={service.name}
-                        fill
+                        width={20}
+                        height={20}
                         className="object-contain"
                       />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-[20px] text-[#727272] font-medium leading-[120%]">
+                    <h3 className="text-xs md:text-md text-[#727272] font-medium md:leading-[120%]">
                       {service.name}
                     </h3>
-                    <p className="text-sm sm:text-sm text-[#808080] leading-[120%] hidden sm:block">
+                    <p className="text-xs md:text-md text-[#808080] leading-[120%] hidden sm:block">
                       {service.location}
                     </p>
                   </div>
@@ -225,12 +226,12 @@ export default function ChardhamPackage() {
           </div>
 
           <h2
-            className="text-gray-700 text-3xl font-medium leading-normal mt-6 border-b background: rgba(0, 0, 0, 0.30);"
+            className="text-gray-700 text-2xl font-medium leading-normal mt-6 border-b background: rgba(0, 0, 0, 0.30);"
             id="overview"
           >
             Overview
           </h2>
-          <h2 className="text-2xl text-gray-600 font-medium leading-[120%] mt-4">
+          <h2 className="text-xl text-gray-600 font-medium leading-[120%] mt-4">
             About Chardham
           </h2>
 
@@ -277,24 +278,24 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="my-8" id="things-to-pack">
-              <h2 className="text-[#000] text-3xl font-medium leading-[38.4px]">
+              <h2 className="text-[#000] text-2xl font-medium leading-[38.4px] pb-2 md:pb-0 border-b md:border-none">
                 Things To Pack
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 mt-6">
                 {pack.map((service, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="bg-gray-100 p-3 rounded-full">
+                    <div className="md:bg-gray-100 p-3 rounded-full">
                       <Image
                         src={service.imgSrc}
                         alt={service.name}
-                        width={40}
-                        height={40}
+                        width={25}
+                        height={25}
                         className="object-contain"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg text-[#727272] font-medium leading-[120%]">
+                      <h3 className="md:text-lg text-md text-[#727272] font-medium leading-[120%]">
                         {service.name}
                       </h3>
                       <p className="text-lg text-[#808080] leading-[120%]">
@@ -308,23 +309,23 @@ export default function ChardhamPackage() {
 
             <div className="mx-auto pr-0 sm:pr-6 pt-6">
               <div className="bg-green-100 p-6 rounded-lg mb-6" id="inclusions">
-                <h2 className="text-black text-3xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
+                <h2 className="text-black md:text-3xl text-2xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
                   Inclusions
                 </h2>
                 <ul className="mt-4 space-y-2">
                   {inclusions.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3 text-black text-lg leading-[22.8px] font-poppins"
+                      className="flex items-start gap-3 text-black text-lg md:leading-[22.8px] font-poppins"
                     >
-                      <FaCheckCircle className="text-green-500 w-6 h-6 flex-shrink-0" />
-                      <span className="flex-1">{item}</span>
+                      <FaCheckCircle className="text-green-500 md:w-6 md:h-6 flex-shrink-0" />
+                      <span className="flex-1 md:text-lg text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="bg-red-100 p-6 rounded-lg">
-                <h2 className="text-black text-3xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
+                <h2 className="text-black md:text-3xl text-2xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
                   Exclusions
                 </h2>
                 <ul className="mt-4 space-y-2">
@@ -333,8 +334,8 @@ export default function ChardhamPackage() {
                       key={index}
                       className="flex items-start gap-3 text-black text-lg leading-[22.8px] font-poppins"
                     >
-                      <FaTimesCircle className="text-red-500 w-6 h-6 flex-shrink-0" />
-                      <span className="flex-1">{item}</span>
+                      <FaTimesCircle className="text-red-500 md:w-6 md:h-6 flex-shrink-0" />
+                      <span className="flex-1 md:text-lg text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>

@@ -17,7 +17,7 @@ const TabSwitch: React.FC<TabSwitchProps> = ({ tabs }) => {
         <a
           key={index}
           href={tab.link} 
-          className="py-2 px-3 text-gray-600 hover:text-blue-500 text-sm md:text-lg"
+          className={`py-2 md:px-3 px-2 text-gray-600 text-xs md:text-lg font-extralight`}
         >
           {tab.label}
         </a>

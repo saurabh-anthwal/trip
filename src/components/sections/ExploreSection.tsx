@@ -5,25 +5,26 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import { explorePlaces } from "@/data/mockData";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const categories = [
   "All Type",
-  "Lakes",
-  "Wildlife",
-  "Temples",
-  "Shopping",
-  "Viewpoints",
-  "Adventure",
+  "CHAR DHAM YATRA",
+  "DO DHAM YATRA",
+  "CHAR DHAM YATRA BY HELICOPTER",
+  "DO DHAM YATRA BY HELICOPTER",
+  "KEDARNATH YATRA",
 ];
 
 export default function ExploreSection() {
+  const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState("All Type");
   const [searchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const filteredPlaces = explorePlaces.filter((place) => {
     const matchesCategory =
-      selectedCategory === "All Type" || place.category === selectedCategory;
+      selectedCategory === "All Type" || place.title === selectedCategory;
     const matchesSearch =
       place.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       place.location.toLowerCase().includes(searchQuery.toLowerCase());
@@ -35,6 +36,10 @@ export default function ExploreSection() {
     setSelectedCategory(category);
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   };
+
+  const handleDetails = (data:any)=>{
+    router.push('/detailsPage/1')
+  }
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white">
@@ -138,7 +143,8 @@ export default function ExploreSection() {
           filteredPlaces.map((place) => (
             <div
               key={place.id}
-              className="group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
+              className="cursor-pointer group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
+              onClick={()=>handleDetails(place)}
             >
               <div className="relative h-[189px] md:h-[273px] overflow-hidden">
                 <Image
