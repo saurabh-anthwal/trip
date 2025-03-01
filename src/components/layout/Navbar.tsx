@@ -10,10 +10,10 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Activities", href: "/activities" },
-    { label: "Packages", href: "/packages" },
+    { label: "Activities", href: "/coming-soon" },
+    { label: "Packages", href: "/coming-soon" },
     { label: "Blog", href: "/blog" },
-    { label: "Book a Trip", href: "/book-a-trip", isButton: true },
+    { label: "Book a Trip", href: "/coming-soon", isButton: true },
   ];
 
   return (

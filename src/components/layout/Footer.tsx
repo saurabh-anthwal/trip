@@ -42,7 +42,7 @@ Your perfect getaway awaits!
           </div>
 
           {/* Product Section */}
-          <div className="flex-1 min-w-[200px]">
+          <div className="flex-1 min-w-[200px] mt-2">
             <h3 className="text-lg font-semibold mb-4 text-black">Activities</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
@@ -62,7 +62,7 @@ Your perfect getaway awaits!
           </div>
 
           {/* Company Section */}
-          <div className="flex-1 min-w-[200px]">
+          <div className="flex-1 min-w-[200px] mt-2">
             <h3 className="text-lg font-semibold mb-4 text-black">Company</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
@@ -89,7 +89,7 @@ Your perfect getaway awaits!
           </div>
 
           {/* Support Section */}
-          <div className="flex-1 min-w-[200px]">
+          <div className="flex-1 min-w-[200px] mt-2">
             <h3 className="text-lg font-semibold mb-4 text-black">Support</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
@@ -121,7 +121,7 @@ Your perfect getaway awaits!
           </div>
 
           {/* Contact Section */}
-          <div className="flex-1 min-w-[200px]">
+          <div className="flex-1 min-w-[200px] mt-2">
             <h3 className="text-lg font-semibold mb-4 text-black">
               Contacts us
             </h3>
