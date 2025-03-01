@@ -9,6 +9,7 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
+import { useRouter } from "next/navigation";
 // import Link from "next/link";
 
 export default function ChardhamPackage() {
@@ -125,7 +126,7 @@ export default function ChardhamPackage() {
     "Cancellation Policies",
     "Refund Policies",
   ];
-
+  const router = useRouter()
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [accordion, setAccordion] = useState<number | null>(null);
 
@@ -137,6 +138,9 @@ export default function ChardhamPackage() {
     setAccordion(openIndex === index ? null : index);
   };
 
+  const handleBooking = ()=>{
+    router.push("/bookingPage")
+  }
   return (
     <div className="container mx-auto py-20 text-gray-600">
       <ImageSections />
@@ -391,7 +395,7 @@ export default function ChardhamPackage() {
                   </span>
                 </div>
               </div>
-              <button className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
+              <button onClick={()=>handleBooking()} className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
                 Send Query Here
               </button>
               <p className="text-gray-500 text-center text-sm font-semibold leading-normal mt-1">

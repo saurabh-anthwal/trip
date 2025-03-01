@@ -350,7 +350,7 @@ export default function ExploreSection() {
                       <FaArrowRightLong />
                     </div>
                     <Link
-                      href="#"
+                      href="/bookingPage"
                       className="text-sm md:text-lg font-normal leading-[22.8px] text-orange-500 font-poppins"
                     >
                       Requ
