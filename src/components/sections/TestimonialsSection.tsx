@@ -1,104 +1,78 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
+"use client"
+import { useEffect, useState } from "react";
 import { testimonials } from "@/data/mockData";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  const prevSlide = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="bg-white relative">
-      <div className="max-w-7xl mx-auto py-10 relative">
-        <div className="px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-4 md:mb-12">
-
-          <div className="flex items-center justify-center gap-2 md:gap-4">
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="31"
-                height="12"
-                viewBox="0 0 31 12"
-                fill="none"
-              >
-                <circle cx="6" cy="6" r="6" fill="#FF7F00" />
-                <path d="M7 6H30.5" stroke="#FF7F00" />
-              </svg>
-
-              <h2 className="text-lg sm:text-4xl font-normal text-black leading-10 text-center">
-                See What Travelers Are Saying
-              </h2>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="31"
-                height="12"
-                viewBox="0 0 31 12"
-                fill="none"
-              >
-                <circle cx="24.5" cy="6" r="6" fill="#FF7F00" />
-                <path d="M23.5 6H0" stroke="#FF7F00" />
-              </svg>
-            </div>
-          </div>
-          <div className="relative flex flex-wrap items-center justify-center w-full">
-            <button
-              onClick={handlePrev}
-              className="absolute left-0 sm:left-[-50px] bg-gray-300 p-3 text-gray-800 rounded-full shadow-md"
-            >
-              <FaArrowLeft />
-            </button>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-20 bg-gray-100 p-4 sm:p-6 rounded-xl shadow-lg w-full">
-              <div className="flex-1 text-center sm:text-left">
-                <p className="text-gray-600 text-base sm:text-xl font-medium leading-6 sm:leading-8">
-                  {testimonials[currentIndex].comment}
-                </p>
-
-                <h4 className="text-gray-900 font-semibold text-lg sm:text-2xl mt-4 sm:mt-8">
-                  {testimonials[currentIndex].name}
-                </h4>
-                <div className="flex justify-center sm:justify-start mt-2">
+    <section className="bg-white relative py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-lg sm:text-4xl font-normal text-black leading-10">See What Travelers Are Saying</h2>
+        <div className="relative mt-8">
+          <div className="flex md:flex-row flex-col-reverse items-center gap-6 md:justify-between bg-gray-100 p-6 rounded-xl shadow-lg w-full max-w-6xl mx-auto">
+            <div className="text-left flex flex-col h-60 py-4 justify-between">
+              <p className="text-gray-600 text-base sm:text-xl font-medium">{testimonials[currentIndex].comment}</p>
+              <div>
+                <h4 className="text-gray-900 font-semibold text-lg sm:text-2xl mt-4">{testimonials[currentIndex].name}</h4>
+                <div className="flex mt-2">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon
                       key={i}
-                      className={`h-8 w-8 ${
-                        i < testimonials[currentIndex].rating
-                          ? "text-yellow-400"
-                          : "text-gray-400"
-                      }`}
+                      className={`h-6 w-6 ${i < testimonials[currentIndex].rating ? "text-yellow-400" : "text-gray-400"}`}
                     />
                   ))}
                 </div>
               </div>
-              <div className="rounded-xl overflow-hidden order-first sm:order-none">
-                <Image
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].name}
-                  width={200}
-                  height={200}
-                  className="w-32 h-32 sm:w-60 sm:h-60 rounded-xl object-cover"
-                />
-              </div>
             </div>
-            <button
-              onClick={handleNext}
-              className="absolute right-0 sm:right-[-50px] text-gray-800 bg-gray-300 p-3 rounded-full shadow-md"
-            >
-              <FaArrowRight/>
-            </button>
+            <div className="mt-4">
+              <Image
+                src={testimonials[currentIndex].image}
+                alt={testimonials[currentIndex].name}
+                width={150}
+                height={150}
+                className="min-w-60 min-h-60 rounded-xl object-cover"
+              />
+            </div>
           </div>
+          {!isMobile && (
+            <>
+              <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full text-lg text-black"><BsArrowLeft /></button>
+              <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full text-lg text-black"><BsArrowRight /></button>
+            </>
+          )}
+          {isMobile && (
+            <div className="flex justify-center mt-4 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-gray-900" : "bg-gray-400"}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -93,24 +93,31 @@ export default function GroupTripDestinations() {
               key={place.id}
               className="group min-w-[85%] md:min-w-[25%] md:max-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="relative h-[189px] md:h-[273px] overflow-hidden">
-                <Image
-                  src="/home-img/kedarnath.png"
-                  alt={place.title}
-                  fill
-                  className="object-cover rounded-3xl transform group-hover:scale-110 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-6">
+       <div className="relative h-[189px] md:h-[273px] overflow-hidden">
+  <Image
+    src="/home-img/kedarnath.png"
+    alt={place.title}
+    fill
+    className="object-cover rounded-3xl transform group-hover:scale-110 transition-transform duration-500"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  />
+
+  {/* Labels */}
+  <div className="absolute top-8 left-0 flex flex-col gap-2">
+    <p><span className="bg-black/50 text-white text-xs px-2 py-1 rounded-lg">Best Seller Package</span></p>
+    <p><span className="bg-orange-500/50 text-white text-xs px-2 py-1 rounded-lg">Group Tours</span></p>
+  </div>
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</div>
+              <div className="md:p-6 p-2">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-2xl text-gray-900 group-hover:text-orange-500 transition-colors">
+                  <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors">
                     {place.title}
                   </h3>
                 </div>
-                <div className="flex md:gap-4 gap-2 items-center text-sm mb-4">
-                  <div className="flex items-center text-orange-500">
+                <div className="flex md:gap-4 gap-4 items-center text-sm">
+                  <div className="flex items-center gap-1 text-orange-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="18"
@@ -153,7 +160,7 @@ export default function GroupTripDestinations() {
                     <span className="text-gray-400">{place.location}</span>
                   </div>
 
-                 <div className="flex items-center text-orange-500">
+                 <div className="flex items-center gap-1 text-orange-500">
                  <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
@@ -230,8 +237,7 @@ export default function GroupTripDestinations() {
                     <span className="text-gray-400">11N/12D</span>
                  </div>
 
-                <div className="flex items-center text-orange-500">
-                  {/* SVG Icon */}
+                <div className="flex items-center gap-1 text-orange-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="15"
@@ -252,27 +258,13 @@ export default function GroupTripDestinations() {
                       fill="#FF7F00"
                     />
                   </svg>
-
                   <span className=" text-gray-400">
                     Group of 1
                   </span>
                 </div>
                 </div>
 
-                {/* <p className="text-gray-600 mb-4 mt-2 line-clamp-2 text-sm">
-                    {place.description}
-                  </p> */}
-                {/* <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <FaClock className="w-4 h-4 mr-2 text-orange-500" />
-                      <span>{place.bestTime}</span>
-                    </div>
-                    <span className="text-orange-500 font-bold text-lg">
-                      {place.price === 0 ? "Free" : `₹${place.price}`}
-                    </span>
-                  </div> */}
-
-                <div className="flex text-gray-400 items-end justify-between w-full">
+                <div className="flex text-gray-400 my-3 items-end justify-between w-full">
                   <div>
                     <p className="font-poppins text-lg leading-[22.8px] my-2">
                       Starts From

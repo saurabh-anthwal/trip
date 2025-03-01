@@ -100,9 +100,9 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: 'Subhash Agarwal',
+    name: 'Deepak Chandra',
     image: '/home-img/testimonal.png',
-    comment: 'Best travel experience ever! Will definitely book again with Triplanza.',
+    comment: 'Best travel experience ever! Will definitely book again with Triplanza.It was an nice experience to Char Dham Yatra with Triplanza guided us all these four holy places. Thanks Mr Suraj Bhatt and Nitin',
     rating: 5
   },
 ];

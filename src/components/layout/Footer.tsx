@@ -1,10 +1,11 @@
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -16,19 +17,24 @@ export default function Footer() {
           {/* Left Section - Logo & Description */}
           <div className="flex-1 min-w-[250px] max-w-[306px]">
             <h2 className="text-3xl font-bold">
-              <span className="text-black font-extrabold italic">trip</span>
-              <span className="text-orange-500 font-extrabold italic">
-                lanza
-              </span>
+            <Link href="/" className="flex items-center">
+            <Image
+              alt="triplanza-logo"
+              src="/logo.png"
+              className="w-28 md:w-48"
+              width={200}
+              height={200}
+            />
+          </Link>
             </h2>
             <p className="mt-4 text-gray-600 leading-6">
-              Embark on the adventure of a lifetime with us, whether it’s a
-              thrilling tour, vibrant city exploration, or a peaceful mountain
-              retreat. Your perfect getaway awaits!
+            Embark on the adventure of a lifetime with us, whether it’s a thrilling tour,
+vibrant city exploration ,or peaceful mountain retreat. 
+Your perfect getaway awaits!
             </p>
             <div className="flex gap-4 mt-4 text-orange-500 text-xl">
               <FaFacebookF />
-              <FaTwitter />
+              {/* <FaTwitter /> */}
               <FaInstagram />
               <FaLinkedinIn />
               <FaYoutube />
@@ -37,32 +43,20 @@ export default function Footer() {
 
           {/* Product Section */}
           <div className="flex-1 min-w-[200px]">
-            <h3 className="text-lg font-semibold mb-4 text-black">Product</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">Activities</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Features
+                River Rafting
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Pricing
-                </a>
+                Bungy Jumping                </a>
               </li>
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Case studies
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
-                  Updates
-                </a>
+                Helicopter Ride                </a>
               </li>
             </ul>
           </div>
@@ -88,11 +82,6 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Culture
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
                   Blog
                 </a>
               </li>
@@ -105,27 +94,27 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Getting started
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
                   Help center
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-orange-500">
-                  Server status
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
-                  Report a bug
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-orange-500">
                   Chat support
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-orange-500">
+                Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-orange-500">
+                Terms & Condition
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-orange-500">
+                Cancellation & Refund Policy
                 </a>
               </li>
             </ul>

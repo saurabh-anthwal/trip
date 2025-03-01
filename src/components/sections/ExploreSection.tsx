@@ -150,9 +150,9 @@ export default function ExploreSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <div className="p-6">
+              <div className="md:p-6 p-2">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-2xl text-gray-900 group-hover:text-orange-500 transition-colors">
+                  <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors">
                     {place.title}
                   </h3>
                 </div>
