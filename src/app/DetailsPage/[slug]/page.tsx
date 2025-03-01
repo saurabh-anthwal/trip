@@ -33,7 +33,7 @@ export default function ChardhamPackage() {
     { name: "Meals", imgSrc: "/icons/Meals.png", location: "Haridwar" },
     {
       name: "Explorations",
-      imgSrc: "/icons/explorations.png",
+      imgSrc: "/icons/Explorations.png",
       location: "Haridwar",
     },
   ];
