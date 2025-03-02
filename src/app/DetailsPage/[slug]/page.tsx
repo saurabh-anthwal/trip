@@ -9,143 +9,41 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
-import { useRouter } from "next/navigation";
-// import Link from "next/link";
+import { useRouter, useParams } from "next/navigation";
+import { explorePlaces } from "@/data/explorePackage";
 
 export default function ChardhamPackage() {
-  const tabs = [
-    { label: "Overview", link: "#overview" },
-    { label: "Itinerary", link: "#itinerary" },
-    { label: "Inclusions", link: "#inclusions" },
-    { label: "Things to Pack", link: "#things-to-pack" },
-  ];
-
-  const basicInfo = [
-    { id: 1, icon: "/icons/duration.png", details: "9 Nights / 10 days" },
-    { id: 2, icon: "/icons/location.png", details: "Haridwar" },
-    { id: 3, icon: "/icons/Bag.png", details: "Group Trip" },
-  ];
-
-  const services = [
-    { name: "Stay", imgSrc: "/icons/stay.png", location: "Haridwar" },
-    { name: "Transfers", imgSrc: "/icons/transport.png", location: "Haridwar" },
-    { name: "Trekking", imgSrc: "/icons/Trekking.png", location: "Haridwar" },
-    { name: "Bonfire", imgSrc: "/icons/Bonfire.png", location: "Haridwar" },
-    { name: "Meals", imgSrc: "/icons/Meals.png", location: "Haridwar" },
-    {
-      name: "Explorations",
-      imgSrc: "/icons/Explorations.png",
-      location: "Haridwar",
-    },
-  ];
-
-  const pack = [
-    {
-      name: "Good quality Rucksack ",
-      imgSrc: "/icons/solar_bag-bold.png",
-    },
-    {
-      name: "Pair Shoes",
-      imgSrc: "/icons/Shoes.png",
-    },
-    {
-      name: "Heavy down jacket",
-      imgSrc: "/icons/game-icons_life-jacket.png",
-    },
-    {
-      name: "Personal medication",
-      imgSrc: "/icons/mdi_medicine.png",
-    },
-    {
-      name: "Personal Care",
-      imgSrc: "/icons/material-symbols_personal-bag.png",
-    },
-    {
-      name: "Personal Documents",
-      imgSrc: "/icons/solar_documents-bold.png",
-    },
-  ];
-
-  const dhams = [
-    {
-      title: "YAMUNOTRI DHAM",
-      description:
-        "Snuggled in Uttarkashi district of Uttarakhand at an altitude of 3,293 m above sea level, Yamunotri Dham is situated at a 190 km distance from Dehradun and 230 km away from Haridwar.",
-      image: "/icons/YAMUNOTRI.png",
-    },
-    {
-      title: "GANGOTRI DHAM",
-      description:
-        "Perched at an altitude of 3,100 m above sea level, Gangotri temple is situated in Uttarkashi district at a distance of 285 km from Haridwar and 240 km away from Dehradun.",
-      image: "/icons/GANGOTRI.png",
-    },
-    {
-      title: "KEDARNATH DHAM",
-      description:
-        "Located in the Rudra Himalayan Ranges near Mandakini River, Kedarnath is settled amidst the mountain scape of the Rudraprayag district. From Dehradun, Kedarnath Temple is 274 km and from Haridwar, Kedarnath is around 245 km.",
-      image: "/icons/KEDARNATH.png",
-    },
-    {
-      title: "BADRINATH DHAM",
-      description:
-        "Badrinath or Badrinarayana Temple is a Hindu temple dedicated to Vishnu. It is situated in the town of Badrinath in Uttarakhand, India.",
-      image: "/icons/BADRINATH.png",
-    },
-  ];
-
-  const inclusions = [
-    "Every Night 1 Water Bottle For Drinking",
-    "Medical Kit And Oxygen Cylinder In Emergency",
-    "Accommodation in 3 Star Deluxe Hotels In Every Destination Besides Kedarnath",
-    "In Kedarnath Basic Category Will Be Provided And Both Male-female Will Be In Separate Room",
-    "Breakfast And Dinner",
-    "In Kedarnath Limited Food Will Be Provided",
-    "Transportation From Haridwar To Sonprayag And Sonprayag To Haridwar Is Included",
-    "Transportation - Tempo Traveler, Innova, Dzire",
-    "Sightseeing On Every Day",
-    "Professional Tour Leader During Your Yatra And 24×7 Ground Support",
-    "Forest Permit And Yatra Registration",
-    "Toll, Taxes, Parking And Driver Allowance",
-  ];
-
-  const exclusions = [
-    "Get 5% Applicable Extra On Billing",
-    "On First Day En-route Haridwar To Rano Chatti Breakfast And Lunch Is Not Included And On Last Day En-route Helang To Haridwar Lunch And Dinner Is Not Included In This Package",
-    "Any Personal Expenses Like : Photography /Videography Charges And Any Kind Of Activities On The Trip.",
-    "Any Arising Of Cost Due To Natural Calamities Like : Landslide, Road Block Or Etc. ( To Be Borne By Customer On The Spot )",
-    "Anything Not Mentioned In Inclusion Will Consider Exclusion",
-    "In Kedarnath Limited Food Will Be Provided",
-    "Any Damage To The Hotel And Vehicle Will Be Borne By The Client",
-    "Expenses Caused By Factors Beyond Our Control Like : Railway And Flight Delays Or Political Disturbances Etc.",
-    "Offloading Paid By The CustomerPer Bag/Per Day Inr 100/- Will Be",
-  ];
-
-  const items = [
-    "Things You Should Know About",
-    "Term & Condition",
-    "Cancellation Policies",
-    "Refund Policies",
-  ];
   const router = useRouter()
+  const params = useParams();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [accordion, setAccordion] = useState<number | null>(null);
+  const slug = params.slug;
 
-  const toggleAccordion = (index:number) => {
+  const selectedPlace = explorePlaces.find(
+    (place) => place.id === Number(slug)
+  );
+
+  if (!selectedPlace) {
+    return <div className="text-center text-red-500">Package not found.</div>;
+  }
+
+  const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const toggleAccordionAvailable = (index:number) => {
+  const toggleAccordionAvailable = (index: number) => {
     setAccordion(openIndex === index ? null : index);
   };
 
-  const handleBooking = ()=>{
+  const handleBooking = () => {
     router.push("/bookingPage")
   }
+  
   return (
     <div className="container mx-auto py-20 text-gray-600">
       <ImageSections />
       <div className="flex mt-4 gap-3 sm:gap-6 text-base sm:text-lg font-medium leading-6 overflow-x-auto">
-        <TabSwitch tabs={tabs} />
+        <TabSwitch tabs={selectedPlace?.tabs} />
       </div>
 
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
@@ -153,7 +51,8 @@ export default function ChardhamPackage() {
         <div className="col-span-2 w-full sm:w-[65%]">
           <div className="flex items-center gap-3 order-2 md:order-1 mb-4">
             <h1 className="text-gray-800 text-lg md:text-3xl font-medium leading-[normal]">
-              Chardham Yatra Package
+              {/* Chardham Yatra Package */}
+              {selectedPlace?.title}
             </h1>
             <div className="flex items-center gap-2">
               <button className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 border hover:bg-gray-300 transition">
@@ -182,12 +81,11 @@ export default function ChardhamPackage() {
           </div>
 
           <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-2 border-b leading-[16.8px] font-normal">
-            {basicInfo.map((el,i) => (
+            {selectedPlace?.basicInfo.map((el, i) => (
               <div
                 key={el.id}
-                className={`flex items-center md:gap-4 gap-2 pb-1 ${
-                  i === 0 || i === 1 ? "border-r-2 md:pr-2 pr-1" : ""
-                }`}
+                className={`flex items-center md:gap-4 gap-2 pb-1 ${i === 0 || i === 1 ? "border-r-2 md:pr-2 pr-1" : ""
+                  }`}
               >
                 <Image
                   src={el.icon}
@@ -202,7 +100,7 @@ export default function ChardhamPackage() {
           </div>
 
           <div className="flex w-full md:grid md:grid-cols-3 gap-8 mt-6 overflow-x-auto pb-4">
-            {services.map((service, index) => {
+            {selectedPlace?.services.map((service, index) => {
               return (
                 <div key={index} className="md:flex items-center gap-4 w-full">
                   <div className="md:bg-gray-100 md:p-2 md:rounded-full">
@@ -236,7 +134,7 @@ export default function ChardhamPackage() {
             Overview
           </h2>
           <h2 className="text-xl text-gray-600 font-medium leading-[120%] mt-4">
-            About Chardham
+            About {selectedPlace.package_name}
           </h2>
 
           <p className="text-gray-500 text-sm font-normal leading-[normal] mt-2">
@@ -250,10 +148,10 @@ export default function ChardhamPackage() {
 
           <div className="mx-auto pr-0 sm:pr-6 pt-6">
             <h2 className="text-black text-2xl font-medium font-[Poppins] mb-6">
-              Where are the Chardhams Situated
+              Where are the {selectedPlace.package_name} Situated
             </h2>
             <div className="space-y-6">
-              {dhams.map((dham, index) => (
+              {selectedPlace?.dhams.map((dham, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-start sm:flex-row md:items-center sm:items-start justify-center sm:justify-start space-x-4"
@@ -278,7 +176,7 @@ export default function ChardhamPackage() {
             </div>
 
             <div id="Itinerary">
-              <ChardhamItinerary />
+              <ChardhamItinerary data={selectedPlace.itinerary} />
             </div>
 
             <div className="my-8" id="things-to-pack">
@@ -287,7 +185,7 @@ export default function ChardhamPackage() {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 mt-6">
-                {pack.map((service, index) => (
+                {selectedPlace?.pack.map((service, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <div className="md:bg-gray-100 p-3 rounded-full">
                       <Image
@@ -317,7 +215,7 @@ export default function ChardhamPackage() {
                   Inclusions
                 </h2>
                 <ul className="mt-4 space-y-2">
-                  {inclusions.map((item, index) => (
+                  {selectedPlace?.inclusions.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-3 text-black text-lg md:leading-[22.8px] font-poppins"
@@ -333,7 +231,7 @@ export default function ChardhamPackage() {
                   Exclusions
                 </h2>
                 <ul className="mt-4 space-y-2">
-                  {exclusions.map((item, index) => (
+                  {selectedPlace?.exclusions.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-3 text-black text-lg leading-[22.8px] font-poppins"
@@ -347,23 +245,24 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="max-w-4xl  mt-5">
-              {items.map((item, index:number) => (
+              {selectedPlace?.items.map((item, index: number) => (
                 <div key={index} className="border-b">
                   <button
                     onClick={() => toggleAccordion(index)}
                     className="w-full flex justify-between items-center py-4 text-left text-black font-[500]"
                   >
-                    {item}
+                    {item.name}
                     <FaChevronDown
-                      className={`transition-transform duration-300 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
+                      className={`transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {openIndex === index && (
-                    <div className="p-4 text-gray-600">
-                      This is the content for {item}.
-                    </div>
+                 item.details.map((el, i) => (
+                  <div key={i} className="bg-gray-100 p-4 rounded-xl shadow-md mb-3">
+                    <p className="text-gray-700 md:text-md text-xs md:font-medium">{el}</p>
+                  </div>
+                ))
                   )}
                 </div>
               ))}
@@ -378,11 +277,11 @@ export default function ChardhamPackage() {
               <div className="flex justify-between items-center gap-3 order-1 md:order-2">
                 <div className="flex items-center space-x-2">
                   <p className="line-through text-gray-400 text-sm font-medium">
-                    ₹12500
+                    ₹{selectedPlace.drop_price}
                   </p>
 
                   <h2 className="text-gray-700 text-3xl font-medium leading-normal">
-                    ₹12500
+                    ₹{selectedPlace.price}
                   </h2>
                   <span className="text-black text-sm font-normal leading-normal">
                     / Per Person
@@ -395,7 +294,7 @@ export default function ChardhamPackage() {
                   </span>
                 </div>
               </div>
-              <button onClick={()=>handleBooking()} className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
+              <button onClick={() => handleBooking()} className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
                 Send Query Here
               </button>
               <p className="text-gray-500 text-center text-sm font-semibold leading-normal mt-1">
@@ -476,9 +375,8 @@ export default function ChardhamPackage() {
                           height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          className={`transition-transform duration-200 ${
-                            accordion === index ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${accordion === index ? "rotate-180" : ""
+                            }`}
                         >
                           <g clipPath="url(#clip0_1995_977)">
                             <path

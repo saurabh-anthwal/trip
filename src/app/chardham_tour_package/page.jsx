@@ -9,7 +9,7 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function ChardhamPackage() {
   const tabs = [
@@ -33,7 +33,7 @@ export default function ChardhamPackage() {
     { name: "Meals", imgSrc: "/icons/Meals.png", location: "Haridwar" },
     {
       name: "Explorations",
-      imgSrc: "/icons/explorations.png",
+      imgSrc: "/icons/Explorations.png",
       location: "Haridwar",
     },
   ];
@@ -125,7 +125,7 @@ export default function ChardhamPackage() {
     "Cancellation Policies",
     "Refund Policies",
   ];
-
+  const router = useRouter()
   const [openIndex, setOpenIndex] = useState(null);
   const [accordion, setAccordion] = useState(null);
 
@@ -137,6 +137,9 @@ export default function ChardhamPackage() {
     setAccordion(openIndex === index ? null : index);
   };
 
+  const handleBooking = ()=>{
+    router.push("/bookingPage")
+  }
   return (
     <div className="container mx-auto py-20 text-gray-600">
       <ImageSections />
@@ -236,12 +239,12 @@ export default function ChardhamPackage() {
           </h2>
 
           <p className="text-gray-500 text-sm font-normal leading-[normal] mt-2">
-            The Char Dham (lit. 'the small four abodes/seats' or 'the small
+            {`The Char Dham (lit. 'the small four abodes/seats' or 'the small
             circuit of four abodes/seats') is an important modern Hindu
             pilgrimage circuit in Uttarakhand, in the Indian Himalayas. Located
             in the Garhwal region of the state of Uttarakhand, the circuit
             consists of four sites—Gangotri, Yamunotri, Kedarnath, and
-            Badrinath.
+            Badrinath.`}
           </p>
 
           <div className="mx-auto pr-0 sm:pr-6 pt-6">
@@ -299,7 +302,7 @@ export default function ChardhamPackage() {
                         {service.name}
                       </h3>
                       <p className="text-lg text-[#808080] leading-[120%]">
-                        {service.location}
+                        {/* {service?.location} */}
                       </p>
                     </div>
                   </div>
@@ -391,7 +394,7 @@ export default function ChardhamPackage() {
                   </span>
                 </div>
               </div>
-              <button className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
+              <button onClick={()=>handleBooking()} className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
                 Send Query Here
               </button>
               <p className="text-gray-500 text-center text-sm font-semibold leading-normal mt-1">

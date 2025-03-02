@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   const [selectedBatch, setSelectedBatch] = useState(0);
@@ -362,9 +363,9 @@ export default function Page() {
           </div>
 
           <div className="space-y-4">
-            <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors">
+            <Link href="/contact" className="w-full px-6 py-2 bg-orange-500 text-white py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors">
               Book Now
-            </button>
+            </Link>
           </div>
           <div className=" p-4 border rounded-xl shadow-md bg-white mt-4">
             <h2 className="text-lg font-semibold text-gray-800">

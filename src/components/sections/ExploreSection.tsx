@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
-import { explorePlaces } from "@/data/mockData";
+import { explorePlaces } from "@/data/explorePackage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -11,9 +11,10 @@ const categories = [
   "All Type",
   "CHAR DHAM YATRA",
   "DO DHAM YATRA",
-  "CHAR DHAM YATRA BY HELICOPTER",
+  "CHARDHAM YATRA BY HELICOPTER",
   "DO DHAM YATRA BY HELICOPTER",
   "KEDARNATH YATRA",
+  "KEKDHAM YATRA BY HELICOPTER"
 ];
 
 export default function ExploreSection() {
@@ -37,8 +38,8 @@ export default function ExploreSection() {
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   };
 
-  const handleDetails = ()=>{
-    router.push('/detailsPage/1')
+  const handleDetails = (id:number)=>{
+    router.push(`/detailsPage/${id}`)
   }
 
   return (
@@ -144,7 +145,7 @@ export default function ExploreSection() {
             <div
               key={place.id}
               className="cursor-pointer group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
-              onClick={()=>handleDetails()}
+              onClick={()=>handleDetails(place?.id)}
             >
               <div className="relative h-[189px] md:h-[273px] overflow-hidden">
                 <Image
@@ -156,9 +157,9 @@ export default function ExploreSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <div className="md:p-6 p-2">
+              <div className="md:p-4 p-2">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors">
+                  <h3 className="md:text-2xl text-xl text-gray-700 group-hover:text-orange-500 transition-colors">
                     {place.title}
                   </h3>
                 </div>
@@ -280,7 +281,7 @@ export default function ExploreSection() {
                         fill="#FF7F00"
                       />
                     </svg>
-                    <span className="text-[#808080]">11N/12D</span>
+                    <span className="text-[#808080]">{place.days}</span>
                   </div>
                 </div>
 
@@ -309,7 +310,7 @@ export default function ExploreSection() {
 
                   {/* Text */}
                   <span className="text-sm font-medium text-[#808080] mb-1">
-                    Total Person 1
+                    Total Person {place.person}
                   </span>
                 </div>
 
@@ -332,7 +333,7 @@ export default function ExploreSection() {
                       Starts From
                     </p>
                     <p className="text-black font-poppins text-lg font-semibold leading-[22.8px]">
-                      ₹12500
+                      ₹{place.price}
                       <span className="text-gray-500 font-poppins text-lg font-normal leading-[22.8px]">
                         /Person
                       </span>
@@ -361,7 +362,7 @@ export default function ExploreSection() {
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm font-extralight">
-                  <del>₹18500</del>
+                  <del>₹{place.drop_price}</del>
                 </p>
               </div>
             </div>

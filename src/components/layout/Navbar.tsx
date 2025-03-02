@@ -13,7 +13,7 @@ export default function Navbar() {
     { label: "Activities", href: "/coming-soon" },
     { label: "Packages", href: "/coming-soon" },
     { label: "Blog", href: "/blog" },
-    { label: "Book a Trip", href: "/coming-soon", isButton: true },
+    { label: "Book a Trip", href: "/contact", isButton: true },
   ];
 
   return (
