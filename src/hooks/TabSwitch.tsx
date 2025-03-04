@@ -20,8 +20,8 @@ const TabSwitch: React.FC<TabSwitchProps> = ({ tabs }) => {
           key={index}
           href={tab.link}
           onClick={() => setActiveTab(tab.link)}
-          className={`py-2 md:px-3 px-2 text-gray-600 text-xs md:text-lg font-extralight transition-all duration-300
-            ${activeTab === tab.link ? "border-b-2 border-gray-900 text-black font-semibold" : ""}
+          className={`py-2 md:px-3 px-2 text-[#808080] text-xs md:text-lg font-extralight transition-all duration-300
+            ${activeTab === tab.link ? "border-b-2 border-[#FF7F00] text-black font-semibold" : ""}
           `}
         >
           {tab.label}

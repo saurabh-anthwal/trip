@@ -1,40 +1,32 @@
-// import Image from 'next/image'
-import React from 'react'
+"use client";
+import React from "react";
+import Image from "next/image";
 
 const ComingSoon = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="text-center">
-        {/* Coming Soon Banner */}
-        <div className="relative mb-6 p-14">
-          <div className="transform -rotate-6 bg-[#FF6B00] text-white text-5xl font-bold py-2 px-8 inline-block">
-            COMING SOON
-            <div className="absolute md:-bottom-6 left-1/2 transform -translate-x-1/2 bg-black text-sm py-2 px-4 text-white">
-              Under Construction
-            </div>
-          </div>
-          {/* Decorative Lines */}
-          <div className="absolute -left-8 top-1/2 w-6 h-[2px] bg-black"></div>
-          <div className="absolute -right-8 top-1/2 w-6 h-[2px] bg-black"></div>
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 relative pt-7 md:pt-0">
+      <div className="text-center relative w-full ">
+        <div className="flex flex-col items-center">
+          <Image
+            src="/404/comming2.png"
+            alt="soon"
+            width={588}
+            height={250}
+            className=""
+          />
+          <h1 className="text-lg md:text-3xl font-semibold mb-4 flex items-center justify-center text-black">
+            🌏 Your Next Adventure Awaits! ✨
+          </h1>
+          <p className="text-gray-600 mb-8 text-sm md:text-2xl  max-w-5xl mx-auto">
+            {`We're crafting a seamless travel booking experience just for you! 🚀 Stay tuned as we bring you the best deals, destinations, and journeys. Coming soon! ⏳`}
+          </p>
+          <button className="bg-[#FF7F00] text-sm md:text-2xl text-white px-6 py-2 rounded hover:bg-[#FF8533] transition-colors">
+            Notify Me
+          </button>
         </div>
-
-        {/* Main Text */}
-        <h1 className="text-xl mb-4 flex items-center justify-center text-black">
-          🌏 Your Next Adventure Awaits! ✨
-        </h1>
-
-        {/* Description */}
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-       {`We're crafting a seamless travel booking experience just for you! 🚀 Stay tuned as we bring you the best deals, destinations, and journeys. Coming soon! ⏳`}
-        </p>
-
-        {/* Notify Me Button */}
-        <button className="bg-[#FF6B00] text-white px-6 py-2 rounded hover:bg-[#FF8533] transition-colors">
-          Notify Me
-        </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ComingSoon
+export default ComingSoon;

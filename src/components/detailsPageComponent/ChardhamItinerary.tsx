@@ -12,7 +12,7 @@ export default function ChardhamItinerary({data}:any) {
 
   return (
     <div className="container mx-auto py-4 mt-5" id="itinerary">
-      <h2 className="text-3xl font-medium mb-4">Itinerary</h2>
+      <h2 className="text-3xl font-medium mb-4 text-[#5F5C5C]">Itinerary</h2>
       <div className="border-t border-gray-300">
         {data &&
           data.map((item:any, index:any) => (

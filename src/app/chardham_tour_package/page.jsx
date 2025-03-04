@@ -5,7 +5,8 @@ import TabSwitch from "@/hooks/TabSwitch";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
@@ -125,7 +126,7 @@ export default function ChardhamPackage() {
     "Cancellation Policies",
     "Refund Policies",
   ];
-  const router = useRouter()
+  const router = useRouter();
   const [openIndex, setOpenIndex] = useState(null);
   const [accordion, setAccordion] = useState(null);
 
@@ -137,9 +138,9 @@ export default function ChardhamPackage() {
     setAccordion(openIndex === index ? null : index);
   };
 
-  const handleBooking = ()=>{
-    router.push("/bookingPage")
-  }
+  const handleBooking = () => {
+    router.push("/bookingPage");
+  };
   return (
     <div className="container mx-auto py-20 text-gray-600">
       <ImageSections />
@@ -148,11 +149,10 @@ export default function ChardhamPackage() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-8 mt-6">
-
         <div className="col-span-2 w-full sm:w-[65%]">
           <div className="flex items-center gap-3 order-2 md:order-1 mb-4">
-            <h1 className="text-gray-800 text-lg md:text-3xl font-medium leading-[normal]">
-              Chardham Yatra Package
+            <h1 className="text-[#323232] text-lg md:text-3xl font-medium leading-[normal]">
+              Deluxe Chardham Yatra package
             </h1>
             <div className="flex items-center gap-2">
               <button className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 border hover:bg-gray-300 transition">
@@ -181,7 +181,7 @@ export default function ChardhamPackage() {
           </div>
 
           <div className="flex gap-2 mt-2 text-gray-500 text-sm pb-2 border-b leading-[16.8px] font-normal">
-            {basicInfo.map((el,i) => (
+            {basicInfo.map((el, i) => (
               <div
                 key={el.id}
                 className={`flex items-center md:gap-4 gap-2 pb-1 ${
@@ -195,7 +195,7 @@ export default function ChardhamPackage() {
                   height={24}
                   className="w-4 h-4"
                 />
-                <span className="text-xs">{el.details}</span>
+                <span className="text-sm">{el.details}</span>
               </div>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function ChardhamPackage() {
             {services.map((service, index) => {
               return (
                 <div key={index} className="md:flex items-center gap-4 w-full">
-                  <div className="md:bg-gray-100 md:p-2 md:rounded-full">
+                  <div className="md:bg-[#FAFAFA] md:p-2 md:rounded-full">
                     <div className="relative w-xl h-xl">
                       <Image
                         src={service.imgSrc}
@@ -216,10 +216,10 @@ export default function ChardhamPackage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs md:text-md text-[#727272] font-medium md:leading-[120%]">
+                    <h3 className="text-xs md:text-base text-[#727272] font-medium md:leading-[120%]">
                       {service.name}
                     </h3>
-                    <p className="text-xs md:text-md text-[#808080] leading-[120%] hidden sm:block">
+                    <p className="text-xs md:text-sm text-[#808080] leading-[120%] hidden sm:block">
                       {service.location}
                     </p>
                   </div>
@@ -229,16 +229,16 @@ export default function ChardhamPackage() {
           </div>
 
           <h2
-            className="text-gray-700 text-2xl font-medium leading-normal mt-6 border-b background: rgba(0, 0, 0, 0.30);"
+            className="text-[#424242] text-3xl font-medium leading-normal mt-6 border-b background: rgba(0, 0, 0, 0.30);"
             id="overview"
           >
             Overview
           </h2>
-          <h2 className="text-xl text-gray-600 font-medium leading-[120%] mt-4">
+          <h2 className="text-2xl text-[#535353] font-medium leading-[120%] mt-4">
             About Chardham
           </h2>
 
-          <p className="text-gray-500 text-sm font-normal leading-[normal] mt-2">
+          <p className="text-[#808080] text-sm font-normal leading-[normal] mt-2">
             {`The Char Dham (lit. 'the small four abodes/seats' or 'the small
             circuit of four abodes/seats') is an important modern Hindu
             pilgrimage circuit in Uttarakhand, in the Indian Himalayas. Located
@@ -281,14 +281,14 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="my-8" id="things-to-pack">
-              <h2 className="text-[#000] text-2xl font-medium leading-[38.4px] pb-2 md:pb-0 border-b md:border-none">
+              <h2 className="text-[#000] text-3xl font-medium leading-[38.4px] pb-2 md:pb-2 md:border-b border-gray-300">
                 Things To Pack
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 mt-6 pt-3">
                 {pack.map((service, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="md:bg-gray-100 p-3 rounded-full">
+                    <div className=" p-3 rounded-full">
                       <Image
                         src={service.imgSrc}
                         alt={service.name}
@@ -311,7 +311,7 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="mx-auto pr-0 sm:pr-6 pt-6">
-              <div className="bg-green-100 p-6 rounded-lg mb-6" id="inclusions">
+              <div className="bg-[#EBFFEE] p-6 rounded-lg mb-6" id="inclusions">
                 <h2 className="text-black md:text-3xl text-2xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
                   Inclusions
                 </h2>
@@ -327,7 +327,7 @@ export default function ChardhamPackage() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-red-100 p-6 rounded-lg">
+              <div className="bg-[#feeeee] p-6 rounded-lg">
                 <h2 className="text-black md:text-3xl text-2xl font-medium leading-[38.4px] font-poppins border-b border-[#808080]">
                   Exclusions
                 </h2>
@@ -335,9 +335,9 @@ export default function ChardhamPackage() {
                   {exclusions.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3 text-black text-lg leading-[22.8px] font-poppins"
+                      className="flex items-center gap-3 text-black text-lg leading-[22.8px] font-poppins"
                     >
-                      <FaTimesCircle className="text-red-500 md:w-6 md:h-6 flex-shrink-0" />
+                      <ImCross className="text-red-500 md:w-4 md:h-4 flex-shrink-0" />
                       <span className="flex-1 md:text-lg text-sm">{item}</span>
                     </li>
                   ))}
@@ -350,7 +350,7 @@ export default function ChardhamPackage() {
                 <div key={index} className="border-b">
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex justify-between items-center py-4 text-left text-black font-[500]"
+                    className="w-full flex justify-between items-center text-lg py-4 text-left text-black font-[500]"
                   >
                     {item}
                     <FaChevronDown
@@ -377,10 +377,10 @@ export default function ChardhamPackage() {
               <div className="flex justify-between items-center gap-3 order-1 md:order-2">
                 <div className="flex items-center space-x-2">
                   <p className="line-through text-gray-400 text-sm font-medium">
-                    ₹12500
+                    ₹32500
                   </p>
 
-                  <h2 className="text-gray-700 text-3xl font-medium leading-normal">
+                  <h2 className="text-[#4B4B4B] text-3xl font-medium leading-normal">
                     ₹12500
                   </h2>
                   <span className="text-black text-sm font-normal leading-normal">
@@ -394,7 +394,10 @@ export default function ChardhamPackage() {
                   </span>
                 </div>
               </div>
-              <button onClick={()=>handleBooking()} className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg">
+              <button
+                onClick={() => handleBooking()}
+                className="bg-[#FF7F00] text-white w-full py-2 mt-3 text-lg rounded-lg"
+              >
                 Send Query Here
               </button>
               <p className="text-gray-500 text-center text-sm font-semibold leading-normal mt-1">
@@ -402,21 +405,21 @@ export default function ChardhamPackage() {
               </p>
             </div>
             <div className="border rounded-lg shadow-lg p-4 my-3">
-              <h3 className="text-gray-700 text-xl font-medium leading-[28.8px]">
+              <h3 className="text-gray-700 text-2xl font-medium leading-[28.8px]">
                 Price Summary
               </h3>
               <div className="flex items-center space-x-3 mt-2 text-gray-700">
                 <span className="font-semibold text-lg leading-[22.8px] text-gray-500">
-                  Room Sharing:
+                  Occupancy
                 </span>
-                <span className="text-gray-500 text-sm">Single</span>
+                <span className="text-[#FF7F00] text-sm  border-b border-[#FF7F00]">Single</span>
                 <span className="text-gray-500 text-sm">Double</span>
                 <span className="text-gray-500 text-sm">Triple</span>
-                <span className="text-orange-500 text-sm font-semibold">
+                <span className="text-gray-500 text-sm">
                   Quad
                 </span>
               </div>
-              <div className="border rounded-lg p-3 mt-3 flex justify-between items-center">
+              <div className="border border-[#808080] rounded-lg p-3 mt-3 flex justify-between items-center">
                 <span className="text-gray-500 text-sm font-medium leading-[16.8px]">
                   Quad Occupancy
                 </span>
@@ -430,10 +433,10 @@ export default function ChardhamPackage() {
                 </div>
               </div>
               <div className="flex gap-2 mt-3">
-                <button className="border px-3 py-2 rounded flex items-center gap-2 text-orange-500 w-full">
+                <button className="border-[#FF7F00] border px-3 py-2 rounded-xl flex items-center justify-center gap-2 text-[#FF7F00] w-full">
                   <BsWhatsapp /> Whatsapp
                 </button>
-                <button className="border px-3 py-2 rounded text-orange-500 w-full">
+                <button className="border-[#FF7F00] border px-3 py-2 rounded-xl text-[#FF7F00] w-full flex items-center justify-center">
                   Get PDF Itinerary
                 </button>
               </div>
@@ -466,7 +469,7 @@ export default function ChardhamPackage() {
                     >
                       <span className="text-gray-700">20 Jun To 25 Jun</span>
                       <div className="flex items-center gap-2">
-                        <span className="bg-green-100 text-green-600 px-2 py-1 rounded text-xs font-semibold">
+                        <span className="bg-[#CFF8D2] text-[#07D11E] px-2 py-1 rounded-2xl text-xs font-semibold">
                           Available
                         </span>
                         <svg

@@ -54,7 +54,7 @@ const PackageCards = () => {
             className="rounded-xl object-cover w-full h-48"
           />
           <div className="p-3">
-            <h3 className="font-semibold text-lg">{pkg.title}</h3>
+            <h3 className="font-semibold text-lg text-[#050505]">{pkg.title}</h3>
             <div className="flex items-center text-sm text-gray-600 gap-2 mt-2">
               <FaMapMarkerAlt className="text-orange-500" /> {pkg.location}
               <MdOutlineWbSunny className="text-yellow-500" /> {pkg.duration}
@@ -65,7 +65,7 @@ const PackageCards = () => {
             <div className="flex justify-between items-center mt-3">
               <div>
                 <p className="text-gray-600 text-sm">Starts From</p>
-                <p className="text-lg ">
+                <p className="text-lg text-[#050505] ">
                   {pkg.price}{" "}
                   {/* <span className="text-sm text-gray-500 line-through">
                     ₹{pkg.oldPrice}

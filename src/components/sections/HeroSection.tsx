@@ -9,7 +9,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row  justify-between">
           {/* Left Content */}
           <div className="lg:w-full space-y-6 pt-[100px]">
-            <div className="inline-flex items-center md:bg-white px-8 py-3 gap-2 rounded-full shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
+            <div className="inline-flex items-center bg-white px-8 py-3 gap-2 rounded-full shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
               <span className="text-sm font-semibold text-[#FF7F00] leading-[120%] font-poppins">
                 Explore the world!
               </span>
@@ -36,12 +36,11 @@ export default function HeroSection() {
               <span className="text-[#FF7F00]">Trip!</span>
             </h1>
 
-            <p className="text-gray-600 text-md md:text-xl">
+            <p className="text-[#191825] text-md md:text-xl opacity-75">
               Where adventure meets comfort. We create unforgettable travel{" "}
               <br />
-              experiences{" "}
+              experiences
             </p>
-
             <div className="flex flex-row md:justify-start justify-start">
               <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
                 Get Started

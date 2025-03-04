@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -13,45 +15,46 @@ export default function Navbar() {
     { label: "Activities", href: "/coming-soon" },
     { label: "Packages", href: "/coming-soon" },
     { label: "Blog", href: "/blog" },
-    { label: "Book a Trip", href: "/contact", isButton: true },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white z-50 shadow-md w-full">
-      <div className="px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 bg-[#EEEFEF] z-50 shadow-md w-full">
+      <div className="px-4 container mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              alt="triplanza-logo"
-              src="/logo.png"
-              className="w-28 md:w-48"
-              width={200}
-              height={200}
-            />
-          </Link>
+          <div className="flex-1">
+            <Link href="/" className="flex items-center">
+              <Image
+                alt="triplanza-logo"
+                src="/logo.png"
+                className="w-28 md:w-48"
+                width={200}
+                height={200}
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) =>
-              item.isButton ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="hover:bg-orange-500 text-gray-600 hover:text-white px-6 py-2 rounded-full transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="text-gray-600 hover:text-orange-500 transition-colors"
-                >
-                  {item.label}
-                </Link>
-              )
-            )}
+          <div className="hidden md:flex flex-1 justify-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`transition-colors text-lg ${
+                  pathname === item.href
+                    ? "text-[#222831] font-semibold"
+                    : "text-[#808080] hover:text-orange-500"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="hidden md:flex flex-1 justify-end">
+            <button className="rounded-lg bg-[#FF7F00] px-4 py-2 text-white">
+              Book a Trip
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,12 +76,23 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="block text-center text-gray-600 hover:text-orange-500 transition-colors px-4"
+              className={`block text-center transition-colors px-4 ${
+                pathname === item.href
+                  ? "text-[#222831] font-semibold"
+                  : "text-gray-600 hover:text-orange-500"
+              }`}
               onClick={() => setIsOpen(false)}
             >
               {item.label}
             </Link>
           ))}
+
+          {/* Book a Trip Button in Mobile View */}
+          <div className="text-center">
+            <button className="rounded-lg bg-[#FF7F00] px-6 py-2 text-white">
+              Book a Trip
+            </button>
+          </div>
         </div>
       </div>
     </nav>
