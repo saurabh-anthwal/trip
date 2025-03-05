@@ -9,12 +9,12 @@ import { useRouter } from "next/navigation";
 
 const categories = [
   "All Type",
-  "CHAR DHAM YATRA",
-  "DO DHAM YATRA",
-  "CHARDHAM YATRA BY HELICOPTER",
-  "DO DHAM YATRA BY HELICOPTER",
-  "KEDARNATH YATRA",
-  "KEKDHAM YATRA BY HELICOPTER"
+  "char dham yatra", 
+  "do dham yatra",
+  "chardham yatra by helicopter",
+  "do dham yatra by helicopter",
+  "kedarnath yatra",
+  "kedarnath yatra by helicopter"
 ];
 
 export default function ExploreSection() {
@@ -101,7 +101,7 @@ export default function ExploreSection() {
           <button
             key={category}
             onClick={() => handleCategoryChange(category)}
-            className={`md:px-10 md:py-3 md:text-md px-4 py-2 text-xs rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
+            className={`md:px-6 md:py-3 md:text-md capitalize px-4 py-2 text-xs rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
               selectedCategory === category
                 ? "bg-orange-500 text-white shadow-lg hover:bg-orange-600"
                 : "bg-gray-200 text-gray-500 hover:bg-gray-100 hover:border-none border-2 border-gray-200"
@@ -114,7 +114,7 @@ export default function ExploreSection() {
 
       {/* Places Grid */}
       <div
-        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-white"
+        className="flex md:flex-wrap md:justify-center px-2 w-full overflow-x-auto  gap-6 bg-gradient-to-b from-gray-50 to-white"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -159,7 +159,7 @@ export default function ExploreSection() {
               </div>
               <div className="md:p-4 p-2">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="md:text-2xl text-xl text-gray-700 group-hover:text-orange-500 transition-colors">
+                  <h3 className="md:text-2xl text-xl text-gray-700 group-hover:text-orange-500 transition-colors capitalize">
                     {place.title}
                   </h3>
                 </div>
@@ -283,9 +283,8 @@ export default function ExploreSection() {
                     </svg>
                     <span className="text-[#808080]">{place.days}</span>
                   </div>
-                </div>
 
-                <div className="flex items-center space-x-2 text-orange-500">
+                  <div className="flex items-center text-[#808080] text-sm mb-3">
                   {/* SVG Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -309,9 +308,11 @@ export default function ExploreSection() {
                   </svg>
 
                   {/* Text */}
-                  <span className="text-sm font-medium text-[#808080] mb-1">
+                  <span className="text-[#808080]">
                     Total Person {place.person}
                   </span>
+                </div>
+
                 </div>
 
                 {/* <p className="text-gray-600 mb-4 mt-2 line-clamp-2 text-sm">

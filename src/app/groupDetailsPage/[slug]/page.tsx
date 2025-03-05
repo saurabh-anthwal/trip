@@ -10,16 +10,17 @@ import { FaChevronDown } from "react-icons/fa";
 import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
 import { useRouter, useParams } from "next/navigation";
-import { explorePlaces } from "@/data/explorePackage";
+// import { explorePlaces } from "@/data/explorePackage";
 import { ImCross } from "react-icons/im";
+import { groupPackages } from "@/data/groupPackages";
 export default function ChardhamPackage() {
   const router = useRouter();
   const params = useParams();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [accordion, setAccordion] = useState<number | null>(null);
   const slug = params.slug;
-
-  const selectedPlace = explorePlaces.find(
+  console.log("aaa",slug)
+  const selectedPlace = groupPackages.find(
     (place) => place.id === Number(slug)
   );
 

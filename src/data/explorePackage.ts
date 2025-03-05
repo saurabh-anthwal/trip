@@ -1,8 +1,8 @@
 export const explorePlaces = [
   {
     id: 1,
-    title: 'CHAR DHAM YATRA',
-    location: 'Uttarakhand',
+    title: 'char dham yatra',
+    location: 'Haridwar',
     days:'11N/12D',
     person:'10',
     image: '/explorePlaces/lakes.jpg',
@@ -286,8 +286,8 @@ export const explorePlaces = [
 
   {
     id: 2,
-    title: 'DO DHAM YATRA',
-    location: 'Uttarakhand',
+    title: 'do dham yatra',
+    location: 'Haridwar',
     days:'3N/4D',
     person:'10',
     image: '/explorePlaces/lakes.jpg',
@@ -538,8 +538,8 @@ export const explorePlaces = [
   
   {
     id: 3,
-    title: 'CHARDHAM YATRA BY HELICOPTER',
-    location: 'Uttarakhand',
+    title: 'chardham yatra by helicopter',
+    location: 'Dehradun',
     days:'5N/6D',
     person:'10',
     image: '/explorePlaces/lakes.jpg',
@@ -804,8 +804,8 @@ export const explorePlaces = [
 
   {
     id: 4,
-    title: 'DO DHAM YATRA BY HELICOPTER',
-    location: 'Uttarakhand',
+    title: 'do dham yatra by helicopter',
+    location: 'Dehradun',
     days:'3N/4D',
     person:'10',
     image: '/explorePlaces/lakes.jpg',
@@ -1056,8 +1056,8 @@ export const explorePlaces = [
 
   {
     id: 5,
-    title: 'KEDARNATH YATRA',
-    location: 'Uttarakhand',
+    title: 'kedarnath yatra',
+    location: 'Haridwar',
     days:'3N/4D',
     person:'10',
     image: '/explorePlaces/lakes.jpg',
@@ -1289,8 +1289,8 @@ export const explorePlaces = [
 
   {
     id: 6,
-    title: 'KEKDHAM YATRA BY HELICOPTER',
-    location: 'Uttarakhand',
+    title: 'kedarnath yatra by helicopter',
+    location: 'Dehradun',
     days:'1N/2D',
     person:'5',
     image: '/explorePlaces/lakes.jpg',
@@ -1510,6 +1510,5 @@ export const explorePlaces = [
       }
     ],
   },
-
 
 ]; 

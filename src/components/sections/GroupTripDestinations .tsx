@@ -1,79 +1,16 @@
 "use client";
 
+import { groupPackages } from "@/data/groupPackages";
 import Image from "next/image";
 // import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const packages = [
-  {
-    id: 1,
-    image: "/home-img/kedarnath.png",
-    title: "CHAR DHAM YATRA BY HELICOPTER | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Group of 15",
-    date: "24 Feb",
-    price: 12500,
-  },
-  {
-    id: 2,
-    image: "/home-img/haridwar.png",
-    title: "DO DHAM YATRA BY HELICOPTER | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Total Person 1",
-    date: "24 Feb",
-    price: 12500,
-  },
-  {
-    id: 3,
-    image: "/home-img/badrinath.png",
-    title: "CHAR DHAM YATRA | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Total Person 1",
-    date: "24 Feb",
-    price: 12500,
-  },
-  {
-    id: 4,
-    image: "/home-img/badrinath.png",
-    title: "DO DHAM YATRA | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Total Person 1",
-    date: "24 Feb",
-    price: 12500,
-  },
-  {
-    id: 5,
-    image: "/home-img/badrinath.png",
-    title: "KEDARNATH YATRA | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Total Person 1",
-    date: "24 Feb",
-    price: 12500,
-  },
-  {
-    id: 6,
-    image: "/home-img/badrinath.png",
-    title: "BADRINATH DHAM | Haridwar",
-    location: "Delhi",
-    duration: "11N/12D",
-    group: "Total Person 1",
-    date: "24 Feb",
-    price: 12500,
-  },
-];
-
 export default function GroupTripDestinations() {
   const router = useRouter()
 
-  const handleDetailsPage = (data:object) => {
-    console.log(data)
-    router.push("detailsPage/1")
+  const handleDetailsPage = (id:number) => {
+    router.push(`groupDetailsPage/${id}`)
   }
   return (
     <div className="bg-white">
@@ -125,10 +62,10 @@ export default function GroupTripDestinations() {
           msOverflowStyle: "none",
         }}
       >
-        {packages.map((place) => (
+        {groupPackages.map((place) => (
           <div
             key={place.id}
-            onClick={()=>handleDetailsPage(place)}
+            onClick={()=>handleDetailsPage(place.id)}
             className="cursor-pointer group min-w-[85%] md:min-w-[25%] md:max-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="relative h-[189px] md:h-[273px] overflow-hidden">
@@ -150,7 +87,7 @@ export default function GroupTripDestinations() {
             </div>
             <div className="md:p-6 p-2">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors">
+                <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors capitalize">
                   {place.title}
                 </h3>
               </div>
