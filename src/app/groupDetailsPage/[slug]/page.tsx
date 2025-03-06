@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import PackageCards from "@/components/detailsPageComponent/packageCards";
+// import PackageCards from "@/components/detailsPageComponent/packageCards";
 import ChardhamItinerary from "@/components/detailsPageComponent/ChardhamItinerary";
 import { useRouter, useParams } from "next/navigation";
 // import { explorePlaces } from "@/data/explorePackage";
@@ -273,7 +273,7 @@ export default function ChardhamPackage() {
                 </div>
               ))}
             </div>
-            <PackageCards />
+            {/* <PackageCards /> */}
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
+ const router = useRouter()
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -17,6 +17,9 @@ export default function Navbar() {
     { label: "Blog", href: "/blog" },
   ];
 
+  const handleUrl = ()=>{
+    router.push("/contact")
+  }
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#fff] z-50 shadow-md w-full">
       <div className="px-4 container mx-auto sm:px-6 lg:px-8">
@@ -51,7 +54,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex flex-1 justify-end">
+          <div  onClick={handleUrl} className="hidden md:flex flex-1 justify-end">
             <button className="rounded-lg bg-[#FF7F00] px-4 py-2 text-white">
               Book a Trip
             </button>
@@ -89,7 +92,7 @@ export default function Navbar() {
 
           {/* Book a Trip Button in Mobile View */}
           <div className="text-center">
-            <button className="rounded-lg bg-[#FF7F00] px-6 py-2 text-white">
+            <button onClick={handleUrl} className="rounded-lg bg-[#FF7F00] px-6 py-2 text-white">
               Book a Trip
             </button>
           </div>

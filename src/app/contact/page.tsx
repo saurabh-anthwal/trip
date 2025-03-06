@@ -18,7 +18,8 @@ export default function ContactUs() {
     firstName: "",
     lastName: "",
     email: "",
-    tripType: "",
+    // tripType: "",
+    mobile:"",
     destination: "",
     query: "",
     termsAccepted: false,
@@ -37,10 +38,47 @@ export default function ContactUs() {
     setFormData((prev) => ({ ...prev, termsAccepted: e.target.checked }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      console.log("Form submitted:", formData);
+
+      const payload = new URLSearchParams({
+        Name: formData?.firstName + formData?.lastName,
+        Email: formData?.email,
+        Mobile: formData?.mobile,
+        Location: formData?.destination,
+        Comment: formData?.query,
+      }).toString();
+    
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyWHapF7XaAPhvcjNMNvsSaPocMtva24Z63PV3hsH4pYRK0JX9iZjj8qtiidlEgjZCz/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded', // Correct Content-Type for form data
+          },
+          body: payload, // Send data as URL-encoded
+        });
+    
+        if (response.ok) {
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            // tripType: "",
+            mobile:"",
+            destination: "",
+            query: "",
+            termsAccepted: false,
+          });
+        } else {
+          console.log('Something went wrong, please try again.');
+        }
+      } catch (error) {
+        console.warn(error)
+      } finally {
+        
+      }
+    };
 
   return (
     <div className="container mx-auto px-4 py-28 text-gray-800">
@@ -172,22 +210,17 @@ export default function ContactUs() {
             </div>
             <div className="md:col-span-2">
               <label className="block text-[19px] text-[rgba(0,0,0,0.40)] font-[Poppins] mb-1">
-                What kind of trip do you prefer?
+                {/* What kind of trip do you prefer? */}
+                Mobile No.
               </label>
-              <div className="relative">
-                <select
-                  name="tripType"
-                  value={formData.tripType}
-                  onChange={handleChange}
-                  className="w-full border border-[#DCDCDC] rounded-[12px] px-4 py-[13px] text-black text-[19px] font-[Poppins] appearance-none"
-                >
-                  <option value="">Select a Category</option>
-                  <option value="adventure">Adventure</option>
-                  <option value="cultural">Cultural</option>
-                  <option value="relaxation">Relaxation</option>
-                </select>
-                <RiArrowDownSLine className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              </div>
+              <input
+                type="number"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+                placeholder="9998887770"
+                className="w-full border border-[#DCDCDC] rounded-[12px] px-4 py-[13px] text-black text-[19px] font-[Poppins] placeholder:text-black"
+              />
             </div>
             <div className="md:col-span-2">
               <label className="block text-[19px] text-[rgba(0,0,0,0.40)] font-[Poppins] mb-1">
@@ -202,8 +235,9 @@ export default function ContactUs() {
                 >
                   <option value="">Select a Location</option>
                   <option value="kedarnath">Kedarnath</option>
-                  <option value="haridwar">Haridwar</option>
-                  <option value="rishikesh">Rishikesh</option>
+                  <option value="Badrinath">Badrinath</option>
+                  <option value="Yamunotri">Yamunotri</option>
+                  <option value="Gangotri">Gangotri</option>
                 </select>
                 <RiArrowDownSLine className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               </div>

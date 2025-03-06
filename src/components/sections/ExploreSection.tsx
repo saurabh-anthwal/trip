@@ -39,7 +39,7 @@ export default function ExploreSection() {
   };
 
   const handleDetails = (id: number) => {
-    router.push(`/detailsPage/${id}`);
+    router.push(`/DetailsPage/${id}`);
   };
 
   return (

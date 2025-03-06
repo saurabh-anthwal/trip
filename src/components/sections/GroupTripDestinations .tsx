@@ -245,10 +245,10 @@ export default function GroupTripDestinations() {
                     Starts From
                   </p>
                   <p className="text-sm font-extralight">
-                    <del>₹18500</del>
+                    <del>₹{place.drop_price}</del>
                   </p>
                   <p className="text-black font-poppins text-lg font-semibold leading-[22.8px]">
-                    ₹12500
+                    ₹{place.price}
                     <span className="text-gray-500 font-poppins text-lg font-normal leading-[22.8px]">
                         /Person
                       </span>
