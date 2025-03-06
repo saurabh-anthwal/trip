@@ -50,7 +50,7 @@ export default function HeroSection() {
 
           {/* Right Content - Image with Floating Elements */}
           <div className="w-full relative md:mt-10 lg:mt-0">
-            <div className="relative h-[350px] md:h-[500px] mt-20">
+            <div className="relative h-[350px] md:h-[500px] md:mt-20 mt-10">
               {/* Main circular background */}
               <div className="absolute">
                 <Image

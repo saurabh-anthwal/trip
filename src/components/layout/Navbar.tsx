@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#fff] z-50 shadow-md w-full">
       <div className="px-4 container mx-auto sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center md:h-20 h-16">
           {/* Logo */}
           <div className="flex-1">
             <Link href="/" className="flex items-center">
@@ -68,7 +68,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden flex flex-col bg-white w-full py-4 space-y-4 absolute left-0 top-20 shadow-md transition-all duration-300 ${
+          className={`md:hidden flex flex-col bg-white w-full py-4 space-y-4 absolute left-0 top-16 shadow-md transition-all duration-300 ${
             isOpen ? "block" : "hidden"
           }`}
         >

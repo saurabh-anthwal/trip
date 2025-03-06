@@ -111,7 +111,7 @@ export default function ServicesSection() {
                 </span>
 
                 <div>
-                  <h3 className="text-lg md:text-3xl font-normal leading-snug text-black font-poppins mb-3">
+                  <h3 className="text-lg md:text-3xl font-normal leading-snug text-black font-poppins my-2">
                     {item.title}
                   </h3>
 

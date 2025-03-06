@@ -39,7 +39,7 @@ export default function StatsSection() {
               </svg>
             </div>
 
-            <p className="mt-2 text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
+            <p className="text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
               of our journey!
             </p>
           </div>

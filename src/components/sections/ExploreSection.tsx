@@ -163,7 +163,7 @@ export default function ExploreSection() {
                     {place.title}
                   </h3>
                 </div>
-                <div className="flex gap-[10px] items-center">
+                <div className="flex justify-between gap-[10px] items-center">
                   <div className="flex items-center text-[#808080] text-sm mb-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +284,7 @@ export default function ExploreSection() {
                     <span className="text-[#808080]">{place.days}</span>
                   </div>
 
-                  <div className="flex items-center text-[#808080] text-sm mb-3">
+                  <div className="flex items-center gap-1 text-[#808080] text-sm mb-3">
                   {/* SVG Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -309,7 +309,7 @@ export default function ExploreSection() {
 
                   {/* Text */}
                   <span className="text-[#808080]">
-                    Total Person {place.person}
+                    Person {place.person}
                   </span>
                 </div>
 

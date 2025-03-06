@@ -154,7 +154,7 @@ export default function ChardhamPackage() {
               {selectedPlace?.dhams.map((dham, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-start sm:flex-row md:items-center sm:items-start justify-center sm:justify-start space-x-4"
+                  className="flex flex-col items-start sm:flex-row md:items-center sm:items-start justify-center sm:justify-start gap-2"
                 >
                   <Image
                     src={dham.image}
@@ -180,7 +180,7 @@ export default function ChardhamPackage() {
             </div>
 
             <div className="my-8" id="things-to-pack">
-              <h2 className="text-[#000] text-3xl font-medium leading-[38.4px] pb-2 md:pb-2 md:border-b border-gray-300">
+              <h2 className="border-b border-gray-300 text-[#000] text-3xl font-medium leading-[38.4px] pb-2 md:pb-2">
                 Things To Pack
               </h2>
 
@@ -292,7 +292,7 @@ export default function ChardhamPackage() {
                     / Per Person
                   </span>
                 </div>
-                <div className="flex items-center gap-1 text-yellow-500">
+                <div className="hidden md:flex items-center gap-1 text-yellow-500">
                   <FaStar />
                   <span className="text-black text-sm font-normal leading-normal">
                     4.5 (1,300)
