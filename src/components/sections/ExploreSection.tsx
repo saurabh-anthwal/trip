@@ -9,16 +9,16 @@ import { useRouter } from "next/navigation";
 
 const categories = [
   "All Type",
-  "char dham yatra", 
+  "char dham yatra",
   "do dham yatra",
   "chardham yatra by helicopter",
   "do dham yatra by helicopter",
   "kedarnath yatra",
-  "kedarnath yatra by helicopter"
+  "kedarnath yatra by helicopter",
 ];
 
 export default function ExploreSection() {
-  const router = useRouter()
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("All Type");
   const [searchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -38,9 +38,9 @@ export default function ExploreSection() {
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   };
 
-  const handleDetails = (id:number)=>{
-    router.push(`/detailsPage/${id}`)
-  }
+  const handleDetails = (id: number) => {
+    router.push(`/detailsPage/${id}`);
+  };
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white">
@@ -82,7 +82,7 @@ export default function ExploreSection() {
           </svg>
         </div>
 
-        <p className="text-center text-xl text-black/50 max-w-2xl mx-auto  w-8/12 md:w-auto">
+        <p className="text-center text-sm md:text-xl text-black/50 max-w-2xl mx-auto  w-9/12 md:w-auto">
           Discover trips that match your flexible lifestyle.
         </p>
       </div>
@@ -145,7 +145,7 @@ export default function ExploreSection() {
             <div
               key={place.id}
               className="cursor-pointer group min-w-[85%] md:min-w-[25%] rounded-3xl border border-gray-300 overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
-              onClick={()=>handleDetails(place?.id)}
+              onClick={() => handleDetails(place?.id)}
             >
               <div className="relative h-[189px] md:h-[273px] overflow-hidden">
                 <Image
@@ -285,34 +285,33 @@ export default function ExploreSection() {
                   </div>
 
                   <div className="flex items-center gap-1 text-[#808080] text-sm mb-3">
-                  {/* SVG Icon */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15"
-                    height="14"
-                    viewBox="0 0 15 14"
-                    fill="none"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M3.8 3.8291C3.8 5.69306 5.28865 7.2041 7.125 7.2041C8.96135 7.2041 10.45 5.69306 10.45 3.8291C10.45 1.96514 8.96135 0.454102 7.125 0.454102C5.28865 0.454102 3.8 1.96514 3.8 3.8291ZM4.94 3.8291C4.94 5.05399 5.91826 6.04696 7.125 6.04696C8.33174 6.04696 9.31 5.05399 9.31 3.8291C9.31 2.60421 8.33174 1.61124 7.125 1.61124C5.91826 1.61124 4.94 2.60421 4.94 3.8291Z"
-                      fill="#FF7F00"
-                    />
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M3.8 9.13267C1.76503 9.13267 0.103662 10.7563 0.00466633 12.797C0.00156689 12.8608 -9.53674e-7 12.9251 -9.53674e-7 12.9898V13.9541H14.25V12.9898C14.25 12.9251 14.2484 12.8608 14.2453 12.797C14.1463 10.7563 12.485 9.13267 10.45 9.13267H3.8ZM13.1033 12.797C13.0059 11.3958 11.8552 10.2898 10.45 10.2898H3.8C2.39481 10.2898 1.2441 11.3958 1.14668 12.797H13.1033Z"
-                      fill="#FF7F00"
-                    />
-                  </svg>
+                    {/* SVG Icon */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="14"
+                      viewBox="0 0 15 14"
+                      fill="none"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M3.8 3.8291C3.8 5.69306 5.28865 7.2041 7.125 7.2041C8.96135 7.2041 10.45 5.69306 10.45 3.8291C10.45 1.96514 8.96135 0.454102 7.125 0.454102C5.28865 0.454102 3.8 1.96514 3.8 3.8291ZM4.94 3.8291C4.94 5.05399 5.91826 6.04696 7.125 6.04696C8.33174 6.04696 9.31 5.05399 9.31 3.8291C9.31 2.60421 8.33174 1.61124 7.125 1.61124C5.91826 1.61124 4.94 2.60421 4.94 3.8291Z"
+                        fill="#FF7F00"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M3.8 9.13267C1.76503 9.13267 0.103662 10.7563 0.00466633 12.797C0.00156689 12.8608 -9.53674e-7 12.9251 -9.53674e-7 12.9898V13.9541H14.25V12.9898C14.25 12.9251 14.2484 12.8608 14.2453 12.797C14.1463 10.7563 12.485 9.13267 10.45 9.13267H3.8ZM13.1033 12.797C13.0059 11.3958 11.8552 10.2898 10.45 10.2898H3.8C2.39481 10.2898 1.2441 11.3958 1.14668 12.797H13.1033Z"
+                        fill="#FF7F00"
+                      />
+                    </svg>
 
-                  {/* Text */}
-                  <span className="text-[#808080]">
-                    Person {place.person}
-                  </span>
-                </div>
-
+                    {/* Text */}
+                    <span className="text-[#808080]">
+                      Person {place.person}
+                    </span>
+                  </div>
                 </div>
 
                 {/* <p className="text-gray-600 mb-4 mt-2 line-clamp-2 text-sm">

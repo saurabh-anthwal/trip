@@ -8,9 +8,9 @@ export default function HeroSection() {
       <div className="px-4  md:ml-40 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row  justify-between">
           {/* Left Content */}
-          <div className="lg:w-full space-y-6 pt-[100px]">
-            <div className="inline-flex items-center bg-white px-8 py-3 gap-2 rounded-full shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
-              <span className="text-sm font-semibold text-[#FF7F00] leading-[120%] font-poppins">
+          <div className="lg:w-full  pt-[100px]">
+            <div className="inline-flex items-center bg-white p-3 md:px-8 md:py-3 gap-2 rounded-full shadow-[0px_844.164px_236.681px_rgba(0,0,0,0),0px_540.422px_215.972px_rgba(0,0,0,0.01),0px_303.741px_182.442px_rgba(0,0,0,0.04),0px_135.106px_135.106px_rgba(0,0,0,0.06),0px_33.53px_73.963px_rgba(0,0,0,0.07)]">
+              <span className="text-xs md:text-sm font-semibold text-[#FF7F00] leading-[120%] font-poppins">
                 Explore the world!
               </span>
               <svg
@@ -28,23 +28,23 @@ export default function HeroSection() {
                 />
               </svg>
             </div>
+            <div className="max-w-max md:max-w-xl">
+              <h1 className="md:text-7xl text-4xl text-black font-poppins font-semibold mt-3 md:leading-[86.4px] leading-[50px]">
+                Book With Us And <span className="text-[#FF7F00]"> Enjoy</span>{" "}
+                Your
+                <br />
+                <span className="text-[#FF7F00]">Journey!</span>
+              </h1>
 
-            <h1 className="md:text-7xl text-4xl text-black font-poppins font-semibold md:leading-[86.4px] leading-[50px]">
-              Book With Us
-              <br /> And <span className="text-[#FF7F00]"> Enjoy</span> Your
-              <br />
-              <span className="text-[#FF7F00]">Trip!</span>
-            </h1>
-
-            <p className="text-[#191825] text-md md:text-xl opacity-75">
-              Where adventure meets comfort. We create unforgettable travel{" "}
-              <br />
-              experiences
-            </p>
-            <div className="flex flex-row md:justify-start justify-start">
-              <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
-                Get Started
-              </button>
+              <p className="text-[#191825] text-sm md:text-xl opacity-75  mt-4">
+                Where adventure meets comfort. We create unforgettable travel
+                experiences
+              </p>
+              <div className="flex flex-row md:justify-start justify-start mt-4">
+                <button className="bg-[#FF7F00] md:text-xl text-white px-8 py-3 md:px-10 md:py-4 rounded-full hover:bg-orange-600 transition-colors">
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
 

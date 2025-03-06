@@ -17,8 +17,8 @@ export default function StatsSection() {
                 <circle cx="24.5" cy="6" r="6" fill="#FF7F00" />
                 <path d="M23.5 6H0" stroke="#FF7F00" />
               </svg>
-              <h2 className="text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
-                Truth, Growth, and Excellence
+              <h2 className="max-w-xl text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
+                Truth, Growth, and Excellence of our journey!
               </h2>
 
               <svg
@@ -38,10 +38,6 @@ export default function StatsSection() {
                 <path d="M7 6H30.5" stroke="#FF7F00" />
               </svg>
             </div>
-
-            <p className="text-lg md:text-4xl font-normal leading-snug md:leading-[50.4px] text-black text-center font-poppins">
-              of our journey!
-            </p>
           </div>
         </div>
 
@@ -59,26 +55,26 @@ export default function StatsSection() {
                 }`}
               >
                 <div className="max-w-[90%] mx-auto">
-                <div className="text-xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-400 text-center font-poppins">
-                  <h3>{stat.label}</h3>
-                  <div className="p-2 rounded-full border border-gray-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 15 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M8.20711 0.496994C7.81658 0.10647 7.18342 0.10647 6.79289 0.496994L0.428932 6.86096C0.0384078 7.25148 0.0384078 7.88465 0.428932 8.27517C0.819457 8.66569 1.45262 8.66569 1.84315 8.27517L7.5 2.61831L13.1569 8.27517C13.5474 8.66569 14.1805 8.66569 14.5711 8.27517C14.9616 7.88465 14.9616 7.25148 14.5711 6.86096L8.20711 0.496994ZM8.5 19.2041L8.5 1.2041H6.5L6.5 19.2041H8.5Z"
-                        fill="#FF7F00"
-                      />
-                    </svg>
+                  <div className="text-xl md:text-5xl flex gap-4 items-center justify-start font-semibold leading-snug md:leading-[66px] text-gray-400 text-center font-poppins">
+                    <h3>{stat.label}</h3>
+                    <div className="p-2 rounded-full border border-gray-400">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 15 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.20711 0.496994C7.81658 0.10647 7.18342 0.10647 6.79289 0.496994L0.428932 6.86096C0.0384078 7.25148 0.0384078 7.88465 0.428932 8.27517C0.819457 8.66569 1.45262 8.66569 1.84315 8.27517L7.5 2.61831L13.1569 8.27517C13.5474 8.66569 14.1805 8.66569 14.5711 8.27517C14.9616 7.88465 14.9616 7.25148 14.5711 6.86096L8.20711 0.496994ZM8.5 19.2041L8.5 1.2041H6.5L6.5 19.2041H8.5Z"
+                          fill="#FF7F00"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-                <p className="mt-2 text-xs md:text-lg font-normal leading-snug text-gray-400">
-                  {stat.description}
-                </p>
+                  <p className="mt-2 text-xs md:text-lg font-normal leading-snug text-gray-400">
+                    {stat.description}
+                  </p>
                 </div>
               </div>
             ))}

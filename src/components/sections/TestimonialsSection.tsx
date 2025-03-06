@@ -28,8 +28,41 @@ export default function TestimonialsSection() {
 
   return (
     <section className="bg-white relative py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-lg sm:text-4xl font-normal text-black leading-10">See What Travelers Are Saying</h2>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="text-center mb-5 mx-auto flex flex-col">
+        <div className="flex items-center justify-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="12"
+            viewBox="0 0 31 12"
+            fill="none"
+          >
+            <circle cx="6" cy="6" r="6" fill="#FF7F00" />
+            <path d="M7 6H30.5" stroke="#FF7F00" />
+          </svg>
+          <h2 className="text-lg md:text-4xl font-normal leading-tight md:leading-snug text-black text-center font-poppins">
+          See What Travelers Are Saying
+          </h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="12"
+            viewBox="0 0 31 12"
+            fill="none"
+          >
+            <circle
+              cx="6"
+              cy="6"
+              r="6"
+              transform="matrix(-1 0 0 1 12 0)"
+              fill="#FF7F00"
+            />
+            <path d="M7 6H30.5" stroke="#FF7F00" />
+          </svg>
+        </div>
+      </div>
+
         <div className="relative mt-8">
           <div className="flex md:flex-row flex-col-reverse items-center gap-6 md:justify-between bg-gray-100 p-6 rounded-xl shadow-lg w-full max-w-6xl mx-auto">
             <div className="text-left flex flex-col h-60 py-4 justify-between">

@@ -12,7 +12,7 @@ const ImageSections = () => {
           alt="Kedarnath"
           width={800}
           height={400}
-          className="rounded-lg object-cover w-full h-[280px] sm:h-[400px] lg:h-[500px]"
+          className="rounded-lg object-cover w-full h-[203px] sm:h-[400px] lg:h-[500px]"
         />
       </div>
 
