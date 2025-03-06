@@ -87,11 +87,11 @@ export default function GroupTripDestinations() {
             </div>
             <div className="md:p-6 p-2">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="md:text-2xl text-xl text-gray-900 group-hover:text-orange-500 transition-colors capitalize">
+                <h3 className="md:text-2xl text-xl text-gray-700 group-hover:text-orange-500 transition-colors capitalize">
                   {place.title}
                 </h3>
               </div>
-              <div className="flex md:gap-4 gap-4 items-center text-sm">
+              <div className="flex justify-between gap-[10px] items-center">
                 <div className="flex items-center gap-1 text-orange-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export default function GroupTripDestinations() {
 
               <div className="flex text-gray-400 my-3 items-end justify-between w-full">
                 <div>
-                  <p className="font-poppins text-lg leading-[22.8px] my-2">
+                  <p className="text-gray-600 font-poppins text-lg leading-[22.8px] my-2">
                     Starts From
                   </p>
                   <p className="text-sm font-extralight">
@@ -249,9 +249,9 @@ export default function GroupTripDestinations() {
                   </p>
                   <p className="text-black font-poppins text-lg font-semibold leading-[22.8px]">
                     ₹12500
-                    <span className="font-poppins text-gray-400 text-lg font-normal leading-[22.8px]">
-                      /Person
-                    </span>
+                    <span className="text-gray-500 font-poppins text-lg font-normal leading-[22.8px]">
+                        /Person
+                      </span>
                   </p>
                 </div>
 

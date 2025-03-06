@@ -40,7 +40,7 @@ export default function ServicesSection() {
             <path d="M7.5 6H31" stroke="#FF7F00" />
           </svg>
         </div>
-        <h2 className="text-[19px] text-black/50 text-center font-normal leading-[22.8px] mb-10">
+        <h2 className="text-[19px] text-black/50 text-center font-normal leading-[22.8px] mb-4">
           Find Trip that fits a Flexible lifestyle
         </h2>
 

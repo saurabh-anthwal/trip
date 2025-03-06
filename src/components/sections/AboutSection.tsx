@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-white pt-2 md:pt-20">
+    <section className="bg-white pt-2 md:pt-20 md:mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Section Title */}
@@ -39,14 +39,13 @@ export default function AboutSection() {
           </div>
 
           {/* Main Content */}
-          <div className="md:text-3xl text-lg text-black md:leading-[3rem]  pt-6">
+          <div className="text-sm md:text-3xl  text-black md:leading-[3rem]  pt-6">
             <h3>
               We&apos;re committed to making travel planning easy and enjoyable
-              <span className="text-gray-500"> for every client.</span>
-            </h3>
-
-            <p className="text-gray-500">
-              Our platform combines a sleek,
+              <span className="text-gray-500">
+                {" "}
+                for every client. Our platform combines a sleek,
+              </span>
               <span className="text-black">
                 minimalist design with advanced features{" "}
               </span>
@@ -56,7 +55,7 @@ export default function AboutSection() {
                 {" "}
                 experience from start to finish.
               </span>
-            </p>
+            </h3>
           </div>
         </div>
       </div>

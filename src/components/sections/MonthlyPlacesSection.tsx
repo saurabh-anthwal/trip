@@ -11,7 +11,7 @@ interface Place {
 export default function MonthlyPlacesSection() {
   return (
     <section className="max-w-7xl mx-auto py-10">
-      <div className="text-center mb-12 mx-auto flex flex-col">
+      <div className="text-center mb-5 mx-auto flex flex-col">
         <div className="flex items-center justify-center gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
